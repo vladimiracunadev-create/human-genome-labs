@@ -1,0 +1,24 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Human Genome Labs",
+  "version": "1.0.0",
+  "description": "Plataforma científica evolutiva y reproducible con contratos, formatos, módulos, perfiles de organismo y genómica de sistemas.",
+  "license": "https://spdx.org/licenses/MIT.html",
+  "programmingLanguage": "TypeScript",
+  "runtimePlatform": "Node.js >=20",
+  "keywords": [
+    "genomics",
+    "bioinformatics",
+    "FASTA",
+    "pangenome",
+    "epigenomics",
+    "single-cell",
+    "genome variation",
+    "TypeScript",
+    "GFF3",
+    "VCF",
+    "modular architecture",
+    "reproducibility"
+  ]
+}

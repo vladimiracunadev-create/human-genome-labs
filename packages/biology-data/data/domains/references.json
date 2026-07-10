@@ -1,0 +1,307 @@
+{
+  "sources": [
+    {
+      "id": "ncbi-genetic-codes",
+      "name": "NCBI Genetic Codes",
+      "authority": "NCBI",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi",
+      "accessed": "2026-07-10",
+      "purpose": "Tablas de traducción genética estándar y mitocondrial de vertebrados."
+    },
+    {
+      "id": "ncbi-grch38",
+      "name": "Homo sapiens genome assembly GRCh38.p14",
+      "authority": "NCBI Datasets",
+      "url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/",
+      "accessed": "2026-07-10",
+      "purpose": "Referencia humana GRCh38.p14."
+    },
+    {
+      "id": "ncbi-t2t",
+      "name": "Homo sapiens genome assembly T2T-CHM13v2.0",
+      "authority": "NCBI Datasets",
+      "url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_009914755.1/",
+      "accessed": "2026-07-10",
+      "purpose": "Ensamblaje humano telómero a telómero."
+    },
+    {
+      "id": "uniprot-human",
+      "name": "Homo sapiens reference proteome UP000005640",
+      "authority": "UniProt",
+      "url": "https://www.uniprot.org/proteomes/UP000005640",
+      "accessed": "2026-07-10",
+      "purpose": "Referencia del proteoma humano."
+    },
+    {
+      "id": "nhgri-hgrp",
+      "name": "Human Genome Reference Program",
+      "authority": "NHGRI",
+      "url": "https://www.genome.gov/Funded-Programs-Projects/Human-Genome-Reference-Program",
+      "accessed": "2026-07-10",
+      "purpose": "Referencia humana y transición hacia representaciones pangenómicas."
+    },
+    {
+      "id": "hprc-draft",
+      "name": "A draft human pangenome reference",
+      "authority": "Human Pangenome Reference Consortium / Nature",
+      "url": "https://www.nature.com/articles/s41586-023-05896-x",
+      "accessed": "2026-07-10",
+      "purpose": "Fundamento científico del primer borrador de pangenoma humano basado en múltiples ensamblajes haplotípicos."
+    },
+    {
+      "id": "encode",
+      "name": "ENCODE Project",
+      "authority": "NHGRI",
+      "url": "https://www.genome.gov/Funded-Programs-Projects/ENCODE-Project-ENCyclopedia-Of-DNA-Elements",
+      "accessed": "2026-07-10",
+      "purpose": "Elementos funcionales y regulación del genoma."
+    },
+    {
+      "id": "epigenomics",
+      "name": "Epigenomics Fact Sheet",
+      "authority": "NHGRI",
+      "url": "https://www.genome.gov/about-genomics/fact-sheets/Epigenomics-Fact-Sheet",
+      "accessed": "2026-07-10",
+      "purpose": "Marcas epigenómicas y regulación sin cambios en la secuencia."
+    },
+    {
+      "id": "4dn",
+      "name": "4D Nucleome Program",
+      "authority": "NIH Common Fund",
+      "url": "https://commonfund.nih.gov/4DNucleome",
+      "accessed": "2026-07-10",
+      "purpose": "Organización tridimensional del núcleo y sus cambios temporales."
+    },
+    {
+      "id": "igvf",
+      "name": "Impact of Genomic Variation on Function Consortium",
+      "authority": "NHGRI",
+      "url": "https://www.genome.gov/Funded-Programs-Projects/Impact-of-Genomic-Variation-on-Function-Consortium",
+      "accessed": "2026-07-10",
+      "purpose": "Conectar variación genómica, función molecular y fenotipo."
+    },
+    {
+      "id": "human-cell-atlas",
+      "name": "Human Cell Atlas",
+      "authority": "Human Cell Atlas Consortium",
+      "url": "https://www.humancellatlas.org/",
+      "accessed": "2026-07-10",
+      "purpose": "Mapas de tipos y estados celulares humanos a resolución de célula única."
+    },
+    {
+      "id": "smaht",
+      "name": "Somatic Mosaicism across Human Tissues",
+      "authority": "NIH Common Fund",
+      "url": "https://commonfund.nih.gov/smaht",
+      "accessed": "2026-07-10",
+      "purpose": "Variación somática entre células y tejidos a lo largo de la vida."
+    },
+    {
+      "id": "dna-repair",
+      "name": "DNA Repair — Molecular Biology of the Cell",
+      "authority": "NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26879/",
+      "accessed": "2026-07-10",
+      "purpose": "Mecanismos de reparación y mantenimiento de la estabilidad genómica."
+    },
+    {
+      "id": "g4-review",
+      "name": "DNA G-quadruplexes in the human genome",
+      "authority": "Nature Reviews Molecular Cell Biology / PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28225080/",
+      "accessed": "2026-07-10",
+      "purpose": "Estructuras G-cuádruplex y su detección en contextos genómicos."
+    },
+    {
+      "id": "triplex-review",
+      "name": "RNA-DNA triplexes: molecular mechanisms and functional roles",
+      "authority": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38582689/",
+      "accessed": "2026-07-10",
+      "purpose": "Tríplex RNA-ADN y regulación genómica."
+    },
+    {
+      "id": "nih-crispr",
+      "name": "The CRISPR Revolution",
+      "authority": "NIH",
+      "url": "https://www.nih.gov/about-nih/nih-turning-discovery-into-health-/transformative-technologies/crispr-revolution",
+      "accessed": "2026-07-10",
+      "purpose": "Edición genómica y aplicaciones experimentales."
+    }
+  ],
+  "reference_assemblies": [
+    {
+      "id": "grch38",
+      "organism": "Homo sapiens",
+      "taxon_id": 9606,
+      "assembly_name": "GRCh38.p14",
+      "refseq_accession": "GCF_000001405.40",
+      "genbank_accession": "GCA_000001405.29",
+      "assembly_level": "Chromosome",
+      "category": "reference genome",
+      "status": "current in this manifest",
+      "recommended_use": [
+        "compatibilidad con anotaciones y herramientas consolidadas",
+        "comparación con estudios basados en hg38"
+      ],
+      "source_id": "ncbi-grch38"
+    },
+    {
+      "id": "t2t-chm13",
+      "organism": "Homo sapiens",
+      "taxon_id": 9606,
+      "assembly_name": "T2T-CHM13v2.0",
+      "refseq_accession": "GCF_009914755.1",
+      "genbank_accession": "GCA_009914755.4",
+      "assembly_level": "Complete Genome",
+      "category": "alternate reference",
+      "status": "current in this manifest",
+      "recommended_use": [
+        "estudio de regiones antes incompletas",
+        "comparación de ensamblajes de alta continuidad"
+      ],
+      "source_id": "ncbi-t2t"
+    }
+  ],
+  "proteomes": [
+    {
+      "id": "UP000005640",
+      "organism": "Homo sapiens",
+      "taxon_id": 9606,
+      "provider": "UniProt",
+      "type": "reference proteome",
+      "source_id": "uniprot-human",
+      "notes": [
+        "Puede consultarse el subconjunto revisado de UniProtKB/Swiss-Prot o un conjunto más amplio según la consulta.",
+        "Las isoformas y el número de registros cambian con las versiones de la base."
+      ]
+    }
+  ],
+  "human_chromosomes": [
+    {
+      "name": "1",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "2",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "3",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "4",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "5",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "6",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "7",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "8",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "9",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "10",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "11",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "12",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "13",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "14",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "15",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "16",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "17",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "18",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "19",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "20",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "21",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "22",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "X",
+      "category": "sex chromosome",
+      "copy_number_note": "La cantidad depende del complemento cromosómico individual."
+    },
+    {
+      "name": "Y",
+      "category": "sex chromosome",
+      "copy_number_note": "Puede estar ausente o presente según el complemento cromosómico individual."
+    },
+    {
+      "name": "MT",
+      "category": "mitochondrial",
+      "copy_number_note": "Genoma circular presente en múltiples copias por célula."
+    }
+  ]
+}

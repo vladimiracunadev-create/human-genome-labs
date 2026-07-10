@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "noncanonical-structures",
+  "titleEs": "Estructuras no canónicas",
+  "descriptionEs": "Detección de motivos candidatos y modelado de evidencia para G4, tríplex y otras conformaciones.",
+  "version": "0.3.0",
+  "maturity": "experimental",
+  "package": "@human-genome-labs/genetics-core",
+  "entrypoint": "packages/genetics-core/src/index.ts",
+  "capabilities": [
+    "structure.g4_candidate"
+  ],
+  "evidenceLevel": "computational_prediction",
+  "clinicalUse": false,
+  "inputs": [
+    "DNA"
+  ],
+  "outputs": [
+    "candidate-regions"
+  ],
+  "limitations": [
+    "Un motivo de secuencia no demuestra formación estructural in vivo."
+  ],
+  "sourceIds": [
+    "g4-review"
+  ],
+  "owners": [
+    "research-maintainers"
+  ],
+  "roadmap": [
+    "métodos alternativos",
+    "benchmarks con conjuntos publicados"
+  ]
+}

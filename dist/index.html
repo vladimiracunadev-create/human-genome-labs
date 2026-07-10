@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#081524">
+  <meta name="description" content="Laboratorio científico para explorar secuencias, codones, aminoácidos y referencias humanas; incluye un juego educativo secundario.">
+  <title>Human Genome Labs — Laboratorio científico</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">HUMAN GENOME LABS · SCIENTIFIC WORKSPACE</p>
+      <h1>Laboratorio científico del genoma</h1>
+      <p>Analiza ADN, explora marcos de lectura y consulta una base molecular trazable. El juego es un módulo complementario de aprendizaje.</p>
+    </div>
+    <div class="dna-mark" aria-hidden="true">A C G T<br><span>U G C A</span></div>
+  </header>
+
+  <nav class="tabs" aria-label="Áreas del laboratorio">
+    <button class="tab active" data-view="sequence">Análisis científico</button>
+    <button class="tab" data-view="research">Fronteras de investigación</button>
+    <button class="tab" data-view="evolution">Evolución del proyecto</button>
+    <button class="tab" data-view="lab">Laboratorio de codones</button>
+    <button class="tab" data-view="challenge">Juego educativo</button>
+    <button class="tab" data-view="encyclopedia">Enciclopedia</button>
+  </nav>
+
+  <main>
+    <section id="lab" class="view">
+      <div class="section-heading">
+        <div><p class="eyebrow">MÓDULO DIDÁCTICO</p><h2>Construye un codón</h2></div>
+        <button id="randomCodon" class="secondary">Codón aleatorio</button>
+      </div>
+
+      <div class="lab-grid">
+        <article class="panel builder-panel">
+          <h3>1. Selecciona tres bases de ADN</h3>
+          <div id="dnaSlots" class="slots" aria-live="polite"></div>
+          <div id="baseButtons" class="base-buttons"></div>
+          <div class="button-row">
+            <button id="undoBase" class="secondary">Deshacer</button>
+            <button id="clearCodon" class="secondary">Limpiar</button>
+          </div>
+        </article>
+
+        <article class="panel process-panel">
+          <h3>2. Flujo de información</h3>
+          <div class="flow">
+            <div><span>ADN</span><strong id="dnaResult">— — —</strong></div>
+            <b>→</b>
+            <div><span>ARNm</span><strong id="rnaResult">— — —</strong></div>
+            <b>→</b>
+            <div><span>Resultado</span><strong id="aaResult">Esperando</strong></div>
+          </div>
+          <div id="aminoCard" class="amino-card empty">Completa las tres posiciones para traducir el codón.</div>
+          <button id="addAmino" class="primary" disabled>Agregar a mi proteína</button>
+        </article>
+      </div>
+
+      <article class="panel protein-panel">
+        <div class="section-heading compact">
+          <div><p class="eyebrow">TU CREACIÓN</p><h3>Cadena de aminoácidos</h3></div>
+          <button id="clearProtein" class="secondary">Reiniciar cadena</button>
+        </div>
+        <div id="proteinChain" class="protein-chain empty">Aún no agregas aminoácidos.</div>
+        <p id="proteinSequence" class="sequence">Secuencia: —</p>
+      </article>
+    </section>
+
+    <section id="sequence" class="view active">
+      <div class="section-heading">
+        <div><p class="eyebrow">NÚCLEO CIENTÍFICO</p><h2>Analiza composición y traducción de ADN</h2></div>
+        <div class="button-row">
+          <button id="randomSequence" class="secondary">Secuencia aleatoria</button>
+          <button id="mutateSequence" class="secondary">Simular mutación</button>
+        </div>
+      </div>
+
+      <div class="sequence-layout">
+        <article class="panel sequence-input-panel">
+          <label for="sequenceInput">Secuencia de ADN</label>
+          <textarea id="sequenceInput" rows="8" spellcheck="false" aria-describedby="sequenceHelp"></textarea>
+          <p id="sequenceHelp" class="muted">Acepta A, C, G, T y los 15 símbolos IUPAC. Los espacios y saltos de línea se ignoran.</p>
+          <div class="sequence-options">
+            <label>Marco de lectura
+              <select id="frameSelect">
+                <option value="1">Marco 1</option>
+                <option value="2">Marco 2</option>
+                <option value="3">Marco 3</option>
+              </select>
+            </label>
+            <label>Código genético
+              <select id="geneticCodeSelect">
+                <option value="standard">Estándar nuclear</option>
+                <option value="human_mitochondrial">Mitocondrial humano</option>
+              </select>
+            </label>
+            <label class="checkbox-label"><input id="stopAtStop" type="checkbox"> Detener en el primer STOP</label>
+          </div>
+          <button id="analyzeSequence" class="primary">Analizar secuencia</button>
+          <p id="sequenceStatus" class="feedback" aria-live="polite"></p>
+          <p id="mutationMessage" class="muted" aria-live="polite"></p>
+        </article>
+
+        <article class="panel sequence-summary-panel">
+          <h3>Resumen</h3>
+          <div class="stats-grid">
+            <div><span>Bases</span><strong id="sequenceLength">0</strong></div>
+            <div><span>GC canónico</span><strong id="gcValue">0 %</strong></div>
+            <div><span>GC esperado</span><strong id="gcExpectedValue">0 %</strong></div>
+            <div><span>Ambiguas</span><strong id="ambiguousCount">0</strong></div>
+            <div><span>Codones</span><strong id="codonCount">0</strong></div>
+            <div><span>Aminoácidos</span><strong id="proteinLength">0</strong></div>
+            <div><span>ORF completas</span><strong id="orfCount">0</strong></div>
+            <div><span>ORF mayor</span><strong id="largestOrf">0 aa</strong></div>
+          </div>
+          <dl class="sequence-results">
+            <dt>ADN normalizado</dt><dd id="normalizedDna">—</dd>
+            <dt>Complementaria</dt><dd id="complementResult">—</dd>
+            <dt>Complementaria inversa</dt><dd id="reverseComplementResult">—</dd>
+            <dt>ARN mensajero</dt><dd id="rnaSequence">—</dd>
+            <dt>Bases sobrantes</dt><dd id="remainderResult">—</dd>
+          </dl>
+        </article>
+      </div>
+
+      <article class="panel translation-panel">
+        <div class="section-heading compact">
+          <div><p class="eyebrow">TRADUCCIÓN</p><h3>Proteína resultante</h3></div>
+          <button id="copyProtein" class="secondary">Copiar proteína</button>
+        </div>
+        <p id="proteinResult" class="protein-output">—</p>
+        <div id="codonTranslationGrid" class="translation-grid"></div>
+      </article>
+
+      <article class="panel translation-panel">
+        <div class="section-heading compact">
+          <div><p class="eyebrow">SEIS MARCOS</p><h3>Traducción por hebra y marco</h3></div>
+        </div>
+        <div id="sixFramesGrid" class="card-grid scientific-grid"></div>
+      </article>
+
+      <article class="panel translation-panel">
+        <div class="section-heading compact">
+          <div><p class="eyebrow">ORF</p><h3>Marcos abiertos de lectura detectados</h3></div>
+        </div>
+        <p class="muted">Coordenadas base cero, extremo final exclusivo. Un ORF computacional no demuestra expresión biológica.</p>
+        <div id="orfGrid" class="card-grid scientific-grid"></div>
+      </article>
+    </section>
+
+
+    <section id="research" class="view">
+      <div class="section-heading">
+        <div><p class="eyebrow">GENÓMICA DE SISTEMAS</p><h2>Lo que todavía se investiga</h2></div>
+        <a class="secondary link-button" href="data/biology.json" download>Descargar base científica JSON</a>
+      </div>
+
+      <article class="panel evidence-panel">
+        <h3>Principio de evidencia</h3>
+        <p>El repositorio separa observación directa, apoyo experimental, predicción computacional e hipótesis. Una señal, asociación o motivo de secuencia no demuestra por sí solo una función biológica ni una consecuencia clínica.</p>
+        <div class="badges">
+          <span class="badge">observed</span><span class="badge">experimentally_supported</span><span class="badge">computational_prediction</span><span class="badge">hypothesis</span>
+        </div>
+      </article>
+
+      <div class="toolbar panel research-toolbar">
+        <label for="frontierFilter">Área de investigación</label>
+        <select id="frontierFilter"></select>
+      </div>
+      <div id="researchFrontierGrid" class="card-grid frontier-grid"></div>
+
+      <div class="section-heading research-heading">
+        <div><p class="eyebrow">EXPERIMENTACIÓN COMPUTACIONAL</p><h2>Taller exploratorio</h2></div>
+      </div>
+      <div class="research-workbench">
+        <article class="panel research-input-panel">
+          <h3>Secuencia codificante o región de interés</h3>
+          <textarea id="researchSequence" rows="8" spellcheck="false">ATGGCTGCTTAA</textarea>
+          <p class="muted">Las coordenadas son base cero. Use <code>-</code> como alelo vacío. Los análisis no anotan transcritos reales ni reemplazan VEP, ClinVar u otras herramientas especializadas.</p>
+          <div class="variant-controls">
+            <label>Posición<input id="variantPosition" type="number" min="0" value="3"></label>
+            <label>Referencia<input id="variantRef" value="G" maxlength="20"></label>
+            <label>Alternativa<input id="variantAlt" value="A" maxlength="20"></label>
+            <label>Marco<select id="variantFrame"><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></label>
+            <label>Código<select id="variantCode"><option value="standard">Estándar</option><option value="human_mitochondrial">Mitocondrial humano</option></select></label>
+          </div>
+          <div class="button-row">
+            <button id="analyzeVariant" class="primary">Analizar variante</button>
+            <button id="scanG4" class="secondary">Buscar candidatos G4</button>
+          </div>
+        </article>
+
+        <article class="panel">
+          <h3>Resultado de variante</h3>
+          <div id="variantResult" class="research-result"><p class="muted">Define una variante para comparar la traducción de referencia y alternativa.</p></div>
+          <hr class="panel-divider">
+          <h3>Candidatos G-cuádruplex</h3>
+          <div id="g4Result" class="research-result"><p class="muted">El detector usa un motivo clásico y reporta únicamente predicciones de secuencia.</p></div>
+        </article>
+      </div>
+
+      <div class="research-workbench compact-workbench">
+        <article class="panel">
+          <h3>Frecuencia alélica observada</h3>
+          <div class="variant-controls allele-controls">
+            <label>Lecturas alternativas<input id="altReads" type="number" min="0" value="12"></label>
+            <label>Lecturas totales<input id="totalReads" type="number" min="1" value="100"></label>
+          </div>
+          <button id="summarizeAllele" class="primary">Calcular intervalo</button>
+        </article>
+        <article class="panel"><div id="alleleResult"><p class="muted">La fracción de lecturas no equivale directamente al porcentaje de células mutadas.</p></div></article>
+      </div>
+
+      <div class="section-heading research-heading">
+        <div><p class="eyebrow">MÉTODOS</p><h2>Catálogo de ensayos y modalidades</h2></div>
+      </div>
+      <div id="assayGrid" class="card-grid"></div>
+    </section>
+
+    <section id="evolution" class="view">
+      <div class="section-heading">
+        <div><p class="eyebrow">PLATAFORMA EVOLUTIVA · v<span id="platformVersion">—</span></p><h2>Módulos, capacidades y madurez</h2></div>
+        <a class="secondary link-button" href="data/modules.json" download>Descargar registro</a>
+      </div>
+      <article class="panel evidence-panel">
+        <h3>El repositorio no se declara terminado</h3>
+        <p>Las capacidades avanzan desde concepto a experimentación, validación y estabilidad. Cada módulo conserva evidencia, limitaciones, versión y próximos pasos. La interfaz consume el registro; no decide la ciencia.</p>
+        <div class="badges"><span class="badge">concept</span><span class="badge">experimental</span><span class="badge">validated</span><span class="badge">stable</span></div>
+      </article>
+      <div class="toolbar panel">
+        <label for="moduleMaturityFilter">Filtrar por madurez</label>
+        <select id="moduleMaturityFilter"></select>
+      </div>
+      <div id="moduleRegistryGrid" class="card-grid scientific-grid"></div>
+      <div class="section-heading research-heading"><div><p class="eyebrow">CONTEXTO CONFIGURABLE</p><h2>Perfiles de organismo</h2></div></div>
+      <p class="muted">Los algoritmos no deben asumir automáticamente ADN humano nuclear de doble hebra. Los perfiles declaran polímero, hebras, topología, compartimento y código genético.</p>
+      <div id="organismProfileGrid" class="card-grid scientific-grid"></div>
+    </section>
+
+    <section id="challenge" class="view">
+      <div class="section-heading">
+        <div><p class="eyebrow">MÓDULO SECUNDARIO · JUEGO</p><h2>Desafíos del ribosoma</h2></div>
+      </div>
+      <div class="game-layout">
+        <aside class="panel setup-panel">
+          <label for="modeSelect">Tipo de desafío</label>
+          <select id="modeSelect"></select>
+          <button id="startGame" class="primary">Comenzar partida</button>
+          <div class="hud">
+            <div><span>Puntaje</span><strong id="score">0</strong></div>
+            <div><span>Ronda</span><strong id="round">0/10</strong></div>
+            <div><span>Racha</span><strong id="streak">0</strong></div>
+            <div><span>Vidas</span><strong id="lives">♥♥♥</strong></div>
+            <div><span>Récord</span><strong id="highScore">0</strong></div>
+          </div>
+        </aside>
+        <article class="panel question-panel">
+          <p id="questionTag" class="eyebrow">LISTO PARA COMENZAR</p>
+          <h3 id="questionText">Selecciona un modo y comienza la partida.</h3>
+          <div id="questionVisual" class="question-visual">ACGT</div>
+          <div id="answerOptions" class="answers"></div>
+          <p id="feedback" class="feedback" aria-live="polite"></p>
+          <button id="nextQuestion" class="primary hidden">Siguiente</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="encyclopedia" class="view">
+      <div class="section-heading">
+        <div><p class="eyebrow">BASE DE CONOCIMIENTO VERSIONADA</p><h2>Enciclopedia genética</h2></div>
+        <a class="secondary link-button" href="data/biology.json" download>Descargar JSON</a>
+      </div>
+      <div class="toolbar panel">
+        <input id="searchInput" type="search" placeholder="Buscar aminoácido, codón o concepto…">
+        <select id="encyclopediaType">
+          <option value="amino">Aminoácidos</option>
+          <option value="codon">Codones</option>
+          <option value="concept">Conceptos</option>
+        </select>
+      </div>
+      <div id="encyclopediaGrid" class="card-grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyecto científico y educativo reproducible. Separa observación, evidencia experimental, predicción e hipótesis. No realiza diagnóstico ni interpretación clínica.</p>
+  </footer>
+  <script type="module" src="assets/apps/web-lab/src/app.js"></script>
+</body>
+</html>

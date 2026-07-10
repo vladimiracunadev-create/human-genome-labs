@@ -1,0 +1,2 @@
+/** Módulo {{id}}: implementación inicial. */
+export const moduleId = "{{id}}";

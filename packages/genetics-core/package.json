@@ -1,0 +1,8 @@
+{
+  "name": "@human-genome-labs/genetics-core",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Algoritmos puros para genética molecular, variantes, estructuras candidatas y estadísticas genómicas.",
+  "license": "MIT"
+}

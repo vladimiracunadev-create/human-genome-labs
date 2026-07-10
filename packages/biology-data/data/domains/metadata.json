@@ -1,0 +1,27 @@
+{
+  "metadata": {
+    "title": "Human Genome Labs — base de conocimiento molecular",
+    "language": "es",
+    "version": "1.0.0",
+    "schema_version": "3.0.0",
+    "released_at": "2026-07-10",
+    "scope": "Plataforma científica evolutiva para genética molecular y genómica de sistemas, organizada en contratos estables, módulos versionados, perfiles de organismo, formatos interoperables y niveles explícitos de evidencia.",
+    "license": "CC0-1.0 para los hechos estructurados del proyecto; verificar licencias y términos de cada fuente externa.",
+    "limitations": [
+      "No sustituye una base clínica ni una anotación genómica completa.",
+      "No interpreta variantes ni entrega recomendaciones médicas.",
+      "Una traducción computacional no demuestra que una proteína exista o sea funcional.",
+      "Las referencias externas evolucionan; el manifiesto registra accesiones y fechas verificadas.",
+      "Los detectores de motivos estructurales identifican candidatos de secuencia; no demuestran que una estructura exista in vivo.",
+      "La interpretación de variantes es molecular y exploratoria; no sustituye anotación clínica, guías ACMG/AMP ni evaluación profesional.",
+      "Los modelos de pangenoma, célula única, epigenómica y cromatina se representan como metadatos y flujos de trabajo; el repositorio no reemplaza pipelines especializados.",
+      "Las estimaciones de frecuencia alélica dependen de profundidad, sesgos de secuenciación, calidad de mapeo y diseño experimental."
+    ],
+    "notes": [
+      "Los codones se interpretan según el marco de lectura y el código genético seleccionado.",
+      "Los símbolos IUPAC ambiguos representan conjuntos posibles de bases.",
+      "El proteoma no es una lista estática de todas las proteínas expresadas en toda condición biológica.",
+      "biology.json es un bundle generado desde archivos de dominio; los cambios deben realizarse en data/domains y regenerarse con pnpm data:bundle."
+    ]
+  }
+}

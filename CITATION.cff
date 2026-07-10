@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Si utiliza este software, cite la versión y las accesiones o fuentes de los datasets analizados. Distinga resultados observados de predicciones computacionales."
+title: "Human Genome Labs"
+type: software
+version: 1.0.0
+date-released: 2026-07-10
+license: MIT
+repository-code: "https://github.com/vladimiracunadev-create/human-genome-labs"
+abstract: "Plataforma científica evolutiva y reproducible para genética, genómica, formatos interoperables, módulos versionados y evidencia explícita."
+keywords:
+  - genomics
+  - bioinformatics
+  - genetics
+  - pangenome
+  - epigenomics
+  - single-cell
+  - genome variation
+  - TypeScript
+  - FASTA

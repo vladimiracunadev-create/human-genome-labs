@@ -1,0 +1,1349 @@
+{
+  "bases": [
+    {
+      "symbol": "A",
+      "name_es": "Adenina",
+      "type": "Purina",
+      "in_dna": true,
+      "in_rna": true,
+      "pairs_dna_with": "T",
+      "pairs_rna_with": "U"
+    },
+    {
+      "symbol": "C",
+      "name_es": "Citosina",
+      "type": "Pirimidina",
+      "in_dna": true,
+      "in_rna": true,
+      "pairs_dna_with": "G",
+      "pairs_rna_with": "G"
+    },
+    {
+      "symbol": "G",
+      "name_es": "Guanina",
+      "type": "Purina",
+      "in_dna": true,
+      "in_rna": true,
+      "pairs_dna_with": "C",
+      "pairs_rna_with": "C"
+    },
+    {
+      "symbol": "T",
+      "name_es": "Timina",
+      "type": "Pirimidina",
+      "in_dna": true,
+      "in_rna": false,
+      "pairs_dna_with": "A",
+      "pairs_rna_with": null
+    },
+    {
+      "symbol": "U",
+      "name_es": "Uracilo",
+      "type": "Pirimidina",
+      "in_dna": false,
+      "in_rna": true,
+      "pairs_dna_with": null,
+      "pairs_rna_with": "A"
+    }
+  ],
+  "base_pairs": [
+    {
+      "dna_pair": "A-T",
+      "hydrogen_bonds": 2
+    },
+    {
+      "dna_pair": "C-G",
+      "hydrogen_bonds": 3
+    }
+  ],
+  "amino_acids": [
+    {
+      "one_letter": "A",
+      "three_letter": "Ala",
+      "name_es": "Alanina",
+      "name_en": "Alanine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Alifática",
+      "mass": 71.0788,
+      "description": "Pequeña y flexible; frecuente en regiones internas de proteínas.",
+      "codons_dna": [
+        "GCA",
+        "GCC",
+        "GCG",
+        "GCT"
+      ],
+      "codons_rna": [
+        "GCA",
+        "GCC",
+        "GCG",
+        "GCU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "R",
+      "three_letter": "Arg",
+      "name_es": "Arginina",
+      "name_en": "Arginine",
+      "category": "Básico",
+      "charge": "Positiva",
+      "polarity": "Polar",
+      "side_chain": "Guanidinio",
+      "mass": 156.1875,
+      "description": "Puede formar enlaces iónicos y participar en la unión a ADN y ARN.",
+      "codons_dna": [
+        "AGA",
+        "AGG",
+        "CGA",
+        "CGC",
+        "CGG",
+        "CGT"
+      ],
+      "codons_rna": [
+        "AGA",
+        "AGG",
+        "CGA",
+        "CGC",
+        "CGG",
+        "CGU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "N",
+      "three_letter": "Asn",
+      "name_es": "Asparagina",
+      "name_en": "Asparagine",
+      "category": "Polar sin carga",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Amida",
+      "mass": 114.1038,
+      "description": "Puede formar enlaces de hidrógeno; participa en sitios de N-glicosilación.",
+      "codons_dna": [
+        "AAC",
+        "AAT"
+      ],
+      "codons_rna": [
+        "AAC",
+        "AAU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "D",
+      "three_letter": "Asp",
+      "name_es": "Ácido aspártico",
+      "name_en": "Aspartic acid",
+      "category": "Ácido",
+      "charge": "Negativa",
+      "polarity": "Polar",
+      "side_chain": "Carboxilato",
+      "mass": 115.0886,
+      "description": "Suele participar en catálisis y enlaces iónicos.",
+      "codons_dna": [
+        "GAC",
+        "GAT"
+      ],
+      "codons_rna": [
+        "GAC",
+        "GAU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "C",
+      "three_letter": "Cys",
+      "name_es": "Cisteína",
+      "name_en": "Cysteine",
+      "category": "Polar sin carga",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Tiol",
+      "mass": 103.1388,
+      "description": "Puede formar puentes disulfuro que estabilizan proteínas.",
+      "codons_dna": [
+        "TGC",
+        "TGT"
+      ],
+      "codons_rna": [
+        "UGC",
+        "UGU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "E",
+      "three_letter": "Glu",
+      "name_es": "Ácido glutámico",
+      "name_en": "Glutamic acid",
+      "category": "Ácido",
+      "charge": "Negativa",
+      "polarity": "Polar",
+      "side_chain": "Carboxilato",
+      "mass": 129.1155,
+      "description": "Aporta carga negativa y participa en catálisis y enlaces iónicos.",
+      "codons_dna": [
+        "GAA",
+        "GAG"
+      ],
+      "codons_rna": [
+        "GAA",
+        "GAG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "Q",
+      "three_letter": "Gln",
+      "name_es": "Glutamina",
+      "name_en": "Glutamine",
+      "category": "Polar sin carga",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Amida",
+      "mass": 128.1307,
+      "description": "Forma enlaces de hidrógeno y contribuye a interacciones proteína-proteína.",
+      "codons_dna": [
+        "CAA",
+        "CAG"
+      ],
+      "codons_rna": [
+        "CAA",
+        "CAG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "G",
+      "three_letter": "Gly",
+      "name_es": "Glicina",
+      "name_en": "Glycine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Especial",
+      "side_chain": "Hidrógeno",
+      "mass": 57.0519,
+      "description": "El aminoácido más pequeño; entrega gran flexibilidad a la cadena.",
+      "codons_dna": [
+        "GGA",
+        "GGC",
+        "GGG",
+        "GGT"
+      ],
+      "codons_rna": [
+        "GGA",
+        "GGC",
+        "GGG",
+        "GGU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "H",
+      "three_letter": "His",
+      "name_es": "Histidina",
+      "name_en": "Histidine",
+      "category": "Básico",
+      "charge": "Variable",
+      "polarity": "Polar",
+      "side_chain": "Imidazol",
+      "mass": 137.1411,
+      "description": "Su carga puede cambiar cerca del pH fisiológico; es común en sitios activos.",
+      "codons_dna": [
+        "CAC",
+        "CAT"
+      ],
+      "codons_rna": [
+        "CAC",
+        "CAU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "I",
+      "three_letter": "Ile",
+      "name_es": "Isoleucina",
+      "name_en": "Isoleucine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Alifática ramificada",
+      "mass": 113.1594,
+      "description": "Favorece núcleos hidrofóbicos y estructuras compactas.",
+      "codons_dna": [
+        "ATA",
+        "ATC",
+        "ATT"
+      ],
+      "codons_rna": [
+        "AUA",
+        "AUC",
+        "AUU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "L",
+      "three_letter": "Leu",
+      "name_es": "Leucina",
+      "name_en": "Leucine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Alifática ramificada",
+      "mass": 113.1594,
+      "description": "Muy común en el interior hidrofóbico de proteínas.",
+      "codons_dna": [
+        "CTA",
+        "CTC",
+        "CTG",
+        "CTT",
+        "TTA",
+        "TTG"
+      ],
+      "codons_rna": [
+        "CUA",
+        "CUC",
+        "CUG",
+        "CUU",
+        "UUA",
+        "UUG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "K",
+      "three_letter": "Lys",
+      "name_es": "Lisina",
+      "name_en": "Lysine",
+      "category": "Básico",
+      "charge": "Positiva",
+      "polarity": "Polar",
+      "side_chain": "Amino",
+      "mass": 128.1741,
+      "description": "Interactúa con grupos negativos y puede sufrir múltiples modificaciones.",
+      "codons_dna": [
+        "AAA",
+        "AAG"
+      ],
+      "codons_rna": [
+        "AAA",
+        "AAG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "M",
+      "three_letter": "Met",
+      "name_es": "Metionina",
+      "name_en": "Methionine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Tioéter",
+      "mass": 131.1926,
+      "description": "ATG actúa normalmente como codón de inicio y aporta metionina.",
+      "codons_dna": [
+        "ATG"
+      ],
+      "codons_rna": [
+        "AUG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "F",
+      "three_letter": "Phe",
+      "name_es": "Fenilalanina",
+      "name_en": "Phenylalanine",
+      "category": "Aromático",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Fenilo",
+      "mass": 147.1766,
+      "description": "Aromático e hidrofóbico; participa en el empaquetamiento de proteínas.",
+      "codons_dna": [
+        "TTC",
+        "TTT"
+      ],
+      "codons_rna": [
+        "UUC",
+        "UUU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "P",
+      "three_letter": "Pro",
+      "name_es": "Prolina",
+      "name_en": "Proline",
+      "category": "Especial",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Anillo pirrolidina",
+      "mass": 97.1167,
+      "description": "Restringe la cadena y puede generar giros o interrumpir hélices.",
+      "codons_dna": [
+        "CCA",
+        "CCC",
+        "CCG",
+        "CCT"
+      ],
+      "codons_rna": [
+        "CCA",
+        "CCC",
+        "CCG",
+        "CCU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "S",
+      "three_letter": "Ser",
+      "name_es": "Serina",
+      "name_en": "Serine",
+      "category": "Polar sin carga",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Hidroxilo",
+      "mass": 87.0782,
+      "description": "Puede formar enlaces de hidrógeno y ser fosforilada.",
+      "codons_dna": [
+        "AGC",
+        "AGT",
+        "TCA",
+        "TCC",
+        "TCG",
+        "TCT"
+      ],
+      "codons_rna": [
+        "AGC",
+        "AGU",
+        "UCA",
+        "UCC",
+        "UCG",
+        "UCU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "T",
+      "three_letter": "Thr",
+      "name_es": "Treonina",
+      "name_en": "Threonine",
+      "category": "Polar sin carga",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Hidroxilo",
+      "mass": 101.1051,
+      "description": "Puede ser fosforilada y participar en enlaces de hidrógeno.",
+      "codons_dna": [
+        "ACA",
+        "ACC",
+        "ACG",
+        "ACT"
+      ],
+      "codons_rna": [
+        "ACA",
+        "ACC",
+        "ACG",
+        "ACU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "W",
+      "three_letter": "Trp",
+      "name_es": "Triptófano",
+      "name_en": "Tryptophan",
+      "category": "Aromático",
+      "charge": "Neutra",
+      "polarity": "Mayormente hidrofóbica",
+      "side_chain": "Indol",
+      "mass": 186.2132,
+      "description": "El aminoácido canónico de mayor masa; absorbe luz ultravioleta.",
+      "codons_dna": [
+        "TGG"
+      ],
+      "codons_rna": [
+        "UGG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "Y",
+      "three_letter": "Tyr",
+      "name_es": "Tirosina",
+      "name_en": "Tyrosine",
+      "category": "Aromático",
+      "charge": "Neutra",
+      "polarity": "Polar aromática",
+      "side_chain": "Fenol",
+      "mass": 163.176,
+      "description": "Aromático con grupo hidroxilo; puede ser fosforilado.",
+      "codons_dna": [
+        "TAC",
+        "TAT"
+      ],
+      "codons_rna": [
+        "UAC",
+        "UAU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "V",
+      "three_letter": "Val",
+      "name_es": "Valina",
+      "name_en": "Valine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Alifática ramificada",
+      "mass": 99.1326,
+      "description": "Favorece el núcleo hidrofóbico de proteínas.",
+      "codons_dna": [
+        "GTA",
+        "GTC",
+        "GTG",
+        "GTT"
+      ],
+      "codons_rna": [
+        "GUA",
+        "GUC",
+        "GUG",
+        "GUU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "U",
+      "three_letter": "Sec",
+      "name_es": "Selenocisteína",
+      "name_en": "Selenocysteine",
+      "category": "Especial",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Selenol",
+      "mass": 150.0388,
+      "description": "Aminoácido proteinogénico especial. UGA puede recodificarse como selenocisteína cuando existen señales celulares específicas.",
+      "codons_dna": [],
+      "codons_rna": [
+        "UGA (recodificación especial)"
+      ],
+      "canonical": false
+    },
+    {
+      "one_letter": "O",
+      "three_letter": "Pyl",
+      "name_es": "Pirrolisina",
+      "name_en": "Pyrrolysine",
+      "category": "Especial",
+      "charge": "Positiva débil",
+      "polarity": "Polar",
+      "side_chain": "Pirrolina",
+      "mass": null,
+      "description": "Aminoácido proteinogénico especial presente en algunos microorganismos; no forma parte habitual del proteoma humano.",
+      "codons_dna": [],
+      "codons_rna": [
+        "UAG (recodificación especial en algunos organismos)"
+      ],
+      "canonical": false
+    }
+  ],
+  "codons": [
+    {
+      "dna": "AAA",
+      "rna": "AAA",
+      "amino_acid": "K",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "K",
+      "amino_acid_mitochondrial_human": "K"
+    },
+    {
+      "dna": "AAC",
+      "rna": "AAC",
+      "amino_acid": "N",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "N",
+      "amino_acid_mitochondrial_human": "N"
+    },
+    {
+      "dna": "AAG",
+      "rna": "AAG",
+      "amino_acid": "K",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "K",
+      "amino_acid_mitochondrial_human": "K"
+    },
+    {
+      "dna": "AAT",
+      "rna": "AAU",
+      "amino_acid": "N",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "N",
+      "amino_acid_mitochondrial_human": "N"
+    },
+    {
+      "dna": "ACA",
+      "rna": "ACA",
+      "amino_acid": "T",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "T",
+      "amino_acid_mitochondrial_human": "T"
+    },
+    {
+      "dna": "ACC",
+      "rna": "ACC",
+      "amino_acid": "T",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "T",
+      "amino_acid_mitochondrial_human": "T"
+    },
+    {
+      "dna": "ACG",
+      "rna": "ACG",
+      "amino_acid": "T",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "T",
+      "amino_acid_mitochondrial_human": "T"
+    },
+    {
+      "dna": "ACT",
+      "rna": "ACU",
+      "amino_acid": "T",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "T",
+      "amino_acid_mitochondrial_human": "T"
+    },
+    {
+      "dna": "AGA",
+      "rna": "AGA",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "*"
+    },
+    {
+      "dna": "AGC",
+      "rna": "AGC",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "AGG",
+      "rna": "AGG",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "*"
+    },
+    {
+      "dna": "AGT",
+      "rna": "AGU",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "ATA",
+      "rna": "AUA",
+      "amino_acid": "I",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "I",
+      "amino_acid_mitochondrial_human": "M"
+    },
+    {
+      "dna": "ATC",
+      "rna": "AUC",
+      "amino_acid": "I",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "I",
+      "amino_acid_mitochondrial_human": "I"
+    },
+    {
+      "dna": "ATG",
+      "rna": "AUG",
+      "amino_acid": "M",
+      "is_start": true,
+      "is_stop": false,
+      "amino_acid_standard": "M",
+      "amino_acid_mitochondrial_human": "M"
+    },
+    {
+      "dna": "ATT",
+      "rna": "AUU",
+      "amino_acid": "I",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "I",
+      "amino_acid_mitochondrial_human": "I"
+    },
+    {
+      "dna": "CAA",
+      "rna": "CAA",
+      "amino_acid": "Q",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "Q",
+      "amino_acid_mitochondrial_human": "Q"
+    },
+    {
+      "dna": "CAC",
+      "rna": "CAC",
+      "amino_acid": "H",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "H",
+      "amino_acid_mitochondrial_human": "H"
+    },
+    {
+      "dna": "CAG",
+      "rna": "CAG",
+      "amino_acid": "Q",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "Q",
+      "amino_acid_mitochondrial_human": "Q"
+    },
+    {
+      "dna": "CAT",
+      "rna": "CAU",
+      "amino_acid": "H",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "H",
+      "amino_acid_mitochondrial_human": "H"
+    },
+    {
+      "dna": "CCA",
+      "rna": "CCA",
+      "amino_acid": "P",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "P",
+      "amino_acid_mitochondrial_human": "P"
+    },
+    {
+      "dna": "CCC",
+      "rna": "CCC",
+      "amino_acid": "P",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "P",
+      "amino_acid_mitochondrial_human": "P"
+    },
+    {
+      "dna": "CCG",
+      "rna": "CCG",
+      "amino_acid": "P",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "P",
+      "amino_acid_mitochondrial_human": "P"
+    },
+    {
+      "dna": "CCT",
+      "rna": "CCU",
+      "amino_acid": "P",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "P",
+      "amino_acid_mitochondrial_human": "P"
+    },
+    {
+      "dna": "CGA",
+      "rna": "CGA",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "R"
+    },
+    {
+      "dna": "CGC",
+      "rna": "CGC",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "R"
+    },
+    {
+      "dna": "CGG",
+      "rna": "CGG",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "R"
+    },
+    {
+      "dna": "CGT",
+      "rna": "CGU",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "R"
+    },
+    {
+      "dna": "CTA",
+      "rna": "CUA",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "CTC",
+      "rna": "CUC",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "CTG",
+      "rna": "CUG",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "CTT",
+      "rna": "CUU",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "GAA",
+      "rna": "GAA",
+      "amino_acid": "E",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "E",
+      "amino_acid_mitochondrial_human": "E"
+    },
+    {
+      "dna": "GAC",
+      "rna": "GAC",
+      "amino_acid": "D",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "D",
+      "amino_acid_mitochondrial_human": "D"
+    },
+    {
+      "dna": "GAG",
+      "rna": "GAG",
+      "amino_acid": "E",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "E",
+      "amino_acid_mitochondrial_human": "E"
+    },
+    {
+      "dna": "GAT",
+      "rna": "GAU",
+      "amino_acid": "D",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "D",
+      "amino_acid_mitochondrial_human": "D"
+    },
+    {
+      "dna": "GCA",
+      "rna": "GCA",
+      "amino_acid": "A",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "A",
+      "amino_acid_mitochondrial_human": "A"
+    },
+    {
+      "dna": "GCC",
+      "rna": "GCC",
+      "amino_acid": "A",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "A",
+      "amino_acid_mitochondrial_human": "A"
+    },
+    {
+      "dna": "GCG",
+      "rna": "GCG",
+      "amino_acid": "A",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "A",
+      "amino_acid_mitochondrial_human": "A"
+    },
+    {
+      "dna": "GCT",
+      "rna": "GCU",
+      "amino_acid": "A",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "A",
+      "amino_acid_mitochondrial_human": "A"
+    },
+    {
+      "dna": "GGA",
+      "rna": "GGA",
+      "amino_acid": "G",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "G",
+      "amino_acid_mitochondrial_human": "G"
+    },
+    {
+      "dna": "GGC",
+      "rna": "GGC",
+      "amino_acid": "G",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "G",
+      "amino_acid_mitochondrial_human": "G"
+    },
+    {
+      "dna": "GGG",
+      "rna": "GGG",
+      "amino_acid": "G",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "G",
+      "amino_acid_mitochondrial_human": "G"
+    },
+    {
+      "dna": "GGT",
+      "rna": "GGU",
+      "amino_acid": "G",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "G",
+      "amino_acid_mitochondrial_human": "G"
+    },
+    {
+      "dna": "GTA",
+      "rna": "GUA",
+      "amino_acid": "V",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "V",
+      "amino_acid_mitochondrial_human": "V"
+    },
+    {
+      "dna": "GTC",
+      "rna": "GUC",
+      "amino_acid": "V",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "V",
+      "amino_acid_mitochondrial_human": "V"
+    },
+    {
+      "dna": "GTG",
+      "rna": "GUG",
+      "amino_acid": "V",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "V",
+      "amino_acid_mitochondrial_human": "V"
+    },
+    {
+      "dna": "GTT",
+      "rna": "GUU",
+      "amino_acid": "V",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "V",
+      "amino_acid_mitochondrial_human": "V"
+    },
+    {
+      "dna": "TAA",
+      "rna": "UAA",
+      "amino_acid": "*",
+      "is_start": false,
+      "is_stop": true,
+      "amino_acid_standard": "*",
+      "amino_acid_mitochondrial_human": "*"
+    },
+    {
+      "dna": "TAC",
+      "rna": "UAC",
+      "amino_acid": "Y",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "Y",
+      "amino_acid_mitochondrial_human": "Y"
+    },
+    {
+      "dna": "TAG",
+      "rna": "UAG",
+      "amino_acid": "*",
+      "is_start": false,
+      "is_stop": true,
+      "amino_acid_standard": "*",
+      "amino_acid_mitochondrial_human": "*"
+    },
+    {
+      "dna": "TAT",
+      "rna": "UAU",
+      "amino_acid": "Y",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "Y",
+      "amino_acid_mitochondrial_human": "Y"
+    },
+    {
+      "dna": "TCA",
+      "rna": "UCA",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "TCC",
+      "rna": "UCC",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "TCG",
+      "rna": "UCG",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "TCT",
+      "rna": "UCU",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "TGA",
+      "rna": "UGA",
+      "amino_acid": "*",
+      "is_start": false,
+      "is_stop": true,
+      "amino_acid_standard": "*",
+      "amino_acid_mitochondrial_human": "W"
+    },
+    {
+      "dna": "TGC",
+      "rna": "UGC",
+      "amino_acid": "C",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "C",
+      "amino_acid_mitochondrial_human": "C"
+    },
+    {
+      "dna": "TGG",
+      "rna": "UGG",
+      "amino_acid": "W",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "W",
+      "amino_acid_mitochondrial_human": "W"
+    },
+    {
+      "dna": "TGT",
+      "rna": "UGU",
+      "amino_acid": "C",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "C",
+      "amino_acid_mitochondrial_human": "C"
+    },
+    {
+      "dna": "TTA",
+      "rna": "UUA",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "TTC",
+      "rna": "UUC",
+      "amino_acid": "F",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "F",
+      "amino_acid_mitochondrial_human": "F"
+    },
+    {
+      "dna": "TTG",
+      "rna": "UUG",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "TTT",
+      "rna": "UUU",
+      "amino_acid": "F",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "F",
+      "amino_acid_mitochondrial_human": "F"
+    }
+  ],
+  "signals": {
+    "standard_start": [
+      {
+        "dna": "ATG",
+        "rna": "AUG",
+        "amino_acid": "M",
+        "name_es": "Metionina"
+      }
+    ],
+    "standard_stop": [
+      {
+        "dna": "TAA",
+        "rna": "UAA"
+      },
+      {
+        "dna": "TAG",
+        "rna": "UAG"
+      },
+      {
+        "dna": "TGA",
+        "rna": "UGA"
+      }
+    ]
+  },
+  "genetic_codes": {
+    "standard": {
+      "table_number": 1,
+      "description_es": "Código genético estándar usado para la mayoría de genes nucleares humanos."
+    },
+    "human_mitochondrial": {
+      "table_number": 2,
+      "description_es": "Código mitocondrial de vertebrados usado por la mitocondria humana.",
+      "differences_from_standard": [
+        {
+          "dna": "ATA",
+          "rna": "AUA",
+          "standard": "I",
+          "mitochondrial": "M"
+        },
+        {
+          "dna": "TGA",
+          "rna": "UGA",
+          "standard": "*",
+          "mitochondrial": "W"
+        },
+        {
+          "dna": "AGA",
+          "rna": "AGA",
+          "standard": "R",
+          "mitochondrial": "*"
+        },
+        {
+          "dna": "AGG",
+          "rna": "AGG",
+          "standard": "R",
+          "mitochondrial": "*"
+        }
+      ]
+    }
+  },
+  "iupac_dna_symbols": [
+    {
+      "symbol": "A",
+      "name_es": "Adenina",
+      "possible_bases": [
+        "A"
+      ],
+      "complement": "T",
+      "ambiguous": false
+    },
+    {
+      "symbol": "C",
+      "name_es": "Citosina",
+      "possible_bases": [
+        "C"
+      ],
+      "complement": "G",
+      "ambiguous": false
+    },
+    {
+      "symbol": "G",
+      "name_es": "Guanina",
+      "possible_bases": [
+        "G"
+      ],
+      "complement": "C",
+      "ambiguous": false
+    },
+    {
+      "symbol": "T",
+      "name_es": "Timina",
+      "possible_bases": [
+        "T"
+      ],
+      "complement": "A",
+      "ambiguous": false
+    },
+    {
+      "symbol": "R",
+      "name_es": "Purina",
+      "possible_bases": [
+        "A",
+        "G"
+      ],
+      "complement": "Y",
+      "ambiguous": true
+    },
+    {
+      "symbol": "Y",
+      "name_es": "Pirimidina",
+      "possible_bases": [
+        "C",
+        "T"
+      ],
+      "complement": "R",
+      "ambiguous": true
+    },
+    {
+      "symbol": "S",
+      "name_es": "Enlace fuerte",
+      "possible_bases": [
+        "G",
+        "C"
+      ],
+      "complement": "S",
+      "ambiguous": true
+    },
+    {
+      "symbol": "W",
+      "name_es": "Enlace débil",
+      "possible_bases": [
+        "A",
+        "T"
+      ],
+      "complement": "W",
+      "ambiguous": true
+    },
+    {
+      "symbol": "K",
+      "name_es": "Ceto",
+      "possible_bases": [
+        "G",
+        "T"
+      ],
+      "complement": "M",
+      "ambiguous": true
+    },
+    {
+      "symbol": "M",
+      "name_es": "Amino",
+      "possible_bases": [
+        "A",
+        "C"
+      ],
+      "complement": "K",
+      "ambiguous": true
+    },
+    {
+      "symbol": "B",
+      "name_es": "No A",
+      "possible_bases": [
+        "C",
+        "G",
+        "T"
+      ],
+      "complement": "V",
+      "ambiguous": true
+    },
+    {
+      "symbol": "D",
+      "name_es": "No C",
+      "possible_bases": [
+        "A",
+        "G",
+        "T"
+      ],
+      "complement": "H",
+      "ambiguous": true
+    },
+    {
+      "symbol": "H",
+      "name_es": "No G",
+      "possible_bases": [
+        "A",
+        "C",
+        "T"
+      ],
+      "complement": "D",
+      "ambiguous": true
+    },
+    {
+      "symbol": "V",
+      "name_es": "No T",
+      "possible_bases": [
+        "A",
+        "C",
+        "G"
+      ],
+      "complement": "B",
+      "ambiguous": true
+    },
+    {
+      "symbol": "N",
+      "name_es": "Cualquier base",
+      "possible_bases": [
+        "A",
+        "C",
+        "G",
+        "T"
+      ],
+      "complement": "N",
+      "ambiguous": true
+    }
+  ]
+}

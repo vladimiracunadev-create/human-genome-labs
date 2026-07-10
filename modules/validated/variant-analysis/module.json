@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "variant-analysis",
+  "titleEs": "Efecto molecular de variantes",
+  "descriptionEs": "Aplicación de variantes simples y comparación exploratoria sobre CDS aisladas.",
+  "version": "1.0.0",
+  "maturity": "validated",
+  "package": "@human-genome-labs/genetics-core",
+  "entrypoint": "packages/genetics-core/src/index.ts",
+  "capabilities": [
+    "variant.apply",
+    "variant.coding_effect",
+    "variant.allele_fraction"
+  ],
+  "evidenceLevel": "computational_prediction",
+  "clinicalUse": false,
+  "inputs": [
+    "DNA",
+    "VCF-like variant",
+    "read counts"
+  ],
+  "outputs": [
+    "ScientificResult",
+    "molecular-effect"
+  ],
+  "limitations": [
+    "No anota transcritos reales ni clasifica variantes clínicamente."
+  ],
+  "sourceIds": [
+    "igvf",
+    "igvf"
+  ],
+  "owners": [
+    "core-maintainers"
+  ],
+  "roadmap": [
+    "normalización de variantes",
+    "integración con anotaciones GFF3"
+  ]
+}

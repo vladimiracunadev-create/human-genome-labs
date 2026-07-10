@@ -1,0 +1,10 @@
+{
+  "name": "Human Genome Labs",
+  "short_name": "Genome Labs",
+  "description": "Laboratorio científico de genética molecular y genómica de sistemas, con módulo educativo secundario.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#081524",
+  "theme_color": "#081524",
+  "lang": "es"
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@human-genome-labs/web-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Laboratorio web de genética molecular y genómica de sistemas con juego secundario.",
+  "license": "MIT"
+}

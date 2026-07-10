@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "Bundler",
+    "lib": [
+      "ES2022",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "rootDir": ".",
+    "outDir": ".build",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitOverride": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "declaration": true,
+    "resolveJsonModule": true
+  },
+  "include": [
+    "apps/**/*.ts",
+    "packages/**/*.ts",
+    "types/**/*.d.ts"
+  ],
+  "exclude": [
+    "dist",
+    ".build",
+    "node_modules"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "pangenome",
+  "titleEs": "Representación de pangenomas",
+  "descriptionEs": "Contrato conceptual para referencias en grafo, haplotipos y rutas.",
+  "version": "0.1.0",
+  "maturity": "concept",
+  "capabilities": [
+    "pangenome.metadata"
+  ],
+  "evidenceLevel": "unknown",
+  "clinicalUse": false,
+  "inputs": [
+    "graph-reference",
+    "haplotypes"
+  ],
+  "outputs": [
+    "paths",
+    "graph-intervals"
+  ],
+  "limitations": [
+    "No incluye todavía un motor de grafos ni alineamiento."
+  ],
+  "sourceIds": [
+    "hprc-draft"
+  ],
+  "owners": [
+    "research-maintainers"
+  ],
+  "roadmap": [
+    "RFC de coordenadas en grafo",
+    "adaptadores GFA/GBZ"
+  ]
+}

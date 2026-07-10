@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "{{id}}",
+  "titleEs": "{{title}}",
+  "descriptionEs": "Describa el problema científico y el alcance.",
+  "version": "0.1.0",
+  "maturity": "{{maturity}}",
+  "capabilities": ["{{id}}.first_capability"],
+  "evidenceLevel": "unknown",
+  "clinicalUse": false,
+  "inputs": [],
+  "outputs": [],
+  "limitations": ["Módulo inicial sin validación externa."],
+  "sourceIds": [],
+  "owners": ["unassigned"],
+  "roadmap": ["Definir contrato", "Agregar pruebas", "Documentar validación"]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "@human-genome-labs/biology-data",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Base científica JSON, esquema y tipos para genética molecular y genómica de sistemas.",
+  "license": "MIT"
+}

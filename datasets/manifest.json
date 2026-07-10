@@ -1,0 +1,65 @@
+{
+  "manifest_version": "2.0.0",
+  "verified_at": "2026-07-10",
+  "storage_policy": "Los archivos grandes no se versionan; se descargan en datasets/raw y se verifican mediante SHA-256.",
+  "datasets": [
+    {
+      "id": "grch38",
+      "accession": "GCF_000001405.40",
+      "assembly": "GRCh38.p14",
+      "provider": "NCBI",
+      "command": "pnpm download:grch38"
+    },
+    {
+      "id": "t2t",
+      "accession": "GCF_009914755.1",
+      "assembly": "T2T-CHM13v2.0",
+      "provider": "NCBI",
+      "command": "pnpm download:t2t"
+    },
+    {
+      "id": "human-proteome",
+      "accession": "UP000005640",
+      "provider": "UniProt",
+      "command": "pnpm download:proteome"
+    }
+  ],
+  "research_resources": [
+    {
+      "id": "hprc",
+      "provider": "NHGRI/HPRC",
+      "role": "pangenome and reference development",
+      "tracked_in": "biology.json#sources"
+    },
+    {
+      "id": "encode",
+      "provider": "NHGRI",
+      "role": "functional genomics",
+      "tracked_in": "biology.json#sources"
+    },
+    {
+      "id": "4dn",
+      "provider": "NIH Common Fund",
+      "role": "nuclear architecture",
+      "tracked_in": "biology.json#sources"
+    },
+    {
+      "id": "igvf",
+      "provider": "NHGRI",
+      "role": "variant-to-function",
+      "tracked_in": "biology.json#sources"
+    },
+    {
+      "id": "hca",
+      "provider": "Human Cell Atlas",
+      "role": "single-cell atlases",
+      "tracked_in": "biology.json#sources"
+    },
+    {
+      "id": "smaht",
+      "provider": "NIH Common Fund",
+      "role": "somatic mosaicism",
+      "tracked_in": "biology.json#sources"
+    }
+  ]
+}

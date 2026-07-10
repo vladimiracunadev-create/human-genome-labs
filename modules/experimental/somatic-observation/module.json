@@ -1,0 +1,35 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "somatic-observation",
+  "titleEs": "Observaciones de mosaicismo somático",
+  "descriptionEs": "Resumen estadístico de fracciones alélicas y trazabilidad de supuestos.",
+  "version": "0.2.0",
+  "maturity": "experimental",
+  "package": "@human-genome-labs/genetics-core",
+  "entrypoint": "packages/genetics-core/src/index.ts",
+  "capabilities": [
+    "somatic.allele_fraction"
+  ],
+  "evidenceLevel": "observed",
+  "clinicalUse": false,
+  "inputs": [
+    "read-counts"
+  ],
+  "outputs": [
+    "frequency-estimate",
+    "confidence-interval"
+  ],
+  "limitations": [
+    "La fracción de lecturas no equivale directamente a la fracción celular."
+  ],
+  "sourceIds": [
+    "smaht"
+  ],
+  "owners": [
+    "research-maintainers"
+  ],
+  "roadmap": [
+    "modelos beta-binomiales",
+    "filtros de calidad"
+  ]
+}

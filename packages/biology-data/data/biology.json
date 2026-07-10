@@ -1,0 +1,2870 @@
+{
+  "metadata": {
+    "title": "Human Genome Labs — base de conocimiento molecular",
+    "language": "es",
+    "version": "1.0.0",
+    "schema_version": "3.0.0",
+    "released_at": "2026-07-10",
+    "scope": "Plataforma científica evolutiva para genética molecular y genómica de sistemas, organizada en contratos estables, módulos versionados, perfiles de organismo, formatos interoperables y niveles explícitos de evidencia.",
+    "license": "CC0-1.0 para los hechos estructurados del proyecto; verificar licencias y términos de cada fuente externa.",
+    "limitations": [
+      "No sustituye una base clínica ni una anotación genómica completa.",
+      "No interpreta variantes ni entrega recomendaciones médicas.",
+      "Una traducción computacional no demuestra que una proteína exista o sea funcional.",
+      "Las referencias externas evolucionan; el manifiesto registra accesiones y fechas verificadas.",
+      "Los detectores de motivos estructurales identifican candidatos de secuencia; no demuestran que una estructura exista in vivo.",
+      "La interpretación de variantes es molecular y exploratoria; no sustituye anotación clínica, guías ACMG/AMP ni evaluación profesional.",
+      "Los modelos de pangenoma, célula única, epigenómica y cromatina se representan como metadatos y flujos de trabajo; el repositorio no reemplaza pipelines especializados.",
+      "Las estimaciones de frecuencia alélica dependen de profundidad, sesgos de secuenciación, calidad de mapeo y diseño experimental."
+    ],
+    "notes": [
+      "Los codones se interpretan según el marco de lectura y el código genético seleccionado.",
+      "Los símbolos IUPAC ambiguos representan conjuntos posibles de bases.",
+      "El proteoma no es una lista estática de todas las proteínas expresadas en toda condición biológica.",
+      "biology.json es un bundle generado desde archivos de dominio; los cambios deben realizarse en data/domains y regenerarse con pnpm data:bundle."
+    ]
+  },
+  "bases": [
+    {
+      "symbol": "A",
+      "name_es": "Adenina",
+      "type": "Purina",
+      "in_dna": true,
+      "in_rna": true,
+      "pairs_dna_with": "T",
+      "pairs_rna_with": "U"
+    },
+    {
+      "symbol": "C",
+      "name_es": "Citosina",
+      "type": "Pirimidina",
+      "in_dna": true,
+      "in_rna": true,
+      "pairs_dna_with": "G",
+      "pairs_rna_with": "G"
+    },
+    {
+      "symbol": "G",
+      "name_es": "Guanina",
+      "type": "Purina",
+      "in_dna": true,
+      "in_rna": true,
+      "pairs_dna_with": "C",
+      "pairs_rna_with": "C"
+    },
+    {
+      "symbol": "T",
+      "name_es": "Timina",
+      "type": "Pirimidina",
+      "in_dna": true,
+      "in_rna": false,
+      "pairs_dna_with": "A",
+      "pairs_rna_with": null
+    },
+    {
+      "symbol": "U",
+      "name_es": "Uracilo",
+      "type": "Pirimidina",
+      "in_dna": false,
+      "in_rna": true,
+      "pairs_dna_with": null,
+      "pairs_rna_with": "A"
+    }
+  ],
+  "base_pairs": [
+    {
+      "dna_pair": "A-T",
+      "hydrogen_bonds": 2
+    },
+    {
+      "dna_pair": "C-G",
+      "hydrogen_bonds": 3
+    }
+  ],
+  "amino_acids": [
+    {
+      "one_letter": "A",
+      "three_letter": "Ala",
+      "name_es": "Alanina",
+      "name_en": "Alanine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Alifática",
+      "mass": 71.0788,
+      "description": "Pequeña y flexible; frecuente en regiones internas de proteínas.",
+      "codons_dna": [
+        "GCA",
+        "GCC",
+        "GCG",
+        "GCT"
+      ],
+      "codons_rna": [
+        "GCA",
+        "GCC",
+        "GCG",
+        "GCU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "R",
+      "three_letter": "Arg",
+      "name_es": "Arginina",
+      "name_en": "Arginine",
+      "category": "Básico",
+      "charge": "Positiva",
+      "polarity": "Polar",
+      "side_chain": "Guanidinio",
+      "mass": 156.1875,
+      "description": "Puede formar enlaces iónicos y participar en la unión a ADN y ARN.",
+      "codons_dna": [
+        "AGA",
+        "AGG",
+        "CGA",
+        "CGC",
+        "CGG",
+        "CGT"
+      ],
+      "codons_rna": [
+        "AGA",
+        "AGG",
+        "CGA",
+        "CGC",
+        "CGG",
+        "CGU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "N",
+      "three_letter": "Asn",
+      "name_es": "Asparagina",
+      "name_en": "Asparagine",
+      "category": "Polar sin carga",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Amida",
+      "mass": 114.1038,
+      "description": "Puede formar enlaces de hidrógeno; participa en sitios de N-glicosilación.",
+      "codons_dna": [
+        "AAC",
+        "AAT"
+      ],
+      "codons_rna": [
+        "AAC",
+        "AAU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "D",
+      "three_letter": "Asp",
+      "name_es": "Ácido aspártico",
+      "name_en": "Aspartic acid",
+      "category": "Ácido",
+      "charge": "Negativa",
+      "polarity": "Polar",
+      "side_chain": "Carboxilato",
+      "mass": 115.0886,
+      "description": "Suele participar en catálisis y enlaces iónicos.",
+      "codons_dna": [
+        "GAC",
+        "GAT"
+      ],
+      "codons_rna": [
+        "GAC",
+        "GAU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "C",
+      "three_letter": "Cys",
+      "name_es": "Cisteína",
+      "name_en": "Cysteine",
+      "category": "Polar sin carga",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Tiol",
+      "mass": 103.1388,
+      "description": "Puede formar puentes disulfuro que estabilizan proteínas.",
+      "codons_dna": [
+        "TGC",
+        "TGT"
+      ],
+      "codons_rna": [
+        "UGC",
+        "UGU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "E",
+      "three_letter": "Glu",
+      "name_es": "Ácido glutámico",
+      "name_en": "Glutamic acid",
+      "category": "Ácido",
+      "charge": "Negativa",
+      "polarity": "Polar",
+      "side_chain": "Carboxilato",
+      "mass": 129.1155,
+      "description": "Aporta carga negativa y participa en catálisis y enlaces iónicos.",
+      "codons_dna": [
+        "GAA",
+        "GAG"
+      ],
+      "codons_rna": [
+        "GAA",
+        "GAG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "Q",
+      "three_letter": "Gln",
+      "name_es": "Glutamina",
+      "name_en": "Glutamine",
+      "category": "Polar sin carga",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Amida",
+      "mass": 128.1307,
+      "description": "Forma enlaces de hidrógeno y contribuye a interacciones proteína-proteína.",
+      "codons_dna": [
+        "CAA",
+        "CAG"
+      ],
+      "codons_rna": [
+        "CAA",
+        "CAG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "G",
+      "three_letter": "Gly",
+      "name_es": "Glicina",
+      "name_en": "Glycine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Especial",
+      "side_chain": "Hidrógeno",
+      "mass": 57.0519,
+      "description": "El aminoácido más pequeño; entrega gran flexibilidad a la cadena.",
+      "codons_dna": [
+        "GGA",
+        "GGC",
+        "GGG",
+        "GGT"
+      ],
+      "codons_rna": [
+        "GGA",
+        "GGC",
+        "GGG",
+        "GGU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "H",
+      "three_letter": "His",
+      "name_es": "Histidina",
+      "name_en": "Histidine",
+      "category": "Básico",
+      "charge": "Variable",
+      "polarity": "Polar",
+      "side_chain": "Imidazol",
+      "mass": 137.1411,
+      "description": "Su carga puede cambiar cerca del pH fisiológico; es común en sitios activos.",
+      "codons_dna": [
+        "CAC",
+        "CAT"
+      ],
+      "codons_rna": [
+        "CAC",
+        "CAU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "I",
+      "three_letter": "Ile",
+      "name_es": "Isoleucina",
+      "name_en": "Isoleucine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Alifática ramificada",
+      "mass": 113.1594,
+      "description": "Favorece núcleos hidrofóbicos y estructuras compactas.",
+      "codons_dna": [
+        "ATA",
+        "ATC",
+        "ATT"
+      ],
+      "codons_rna": [
+        "AUA",
+        "AUC",
+        "AUU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "L",
+      "three_letter": "Leu",
+      "name_es": "Leucina",
+      "name_en": "Leucine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Alifática ramificada",
+      "mass": 113.1594,
+      "description": "Muy común en el interior hidrofóbico de proteínas.",
+      "codons_dna": [
+        "CTA",
+        "CTC",
+        "CTG",
+        "CTT",
+        "TTA",
+        "TTG"
+      ],
+      "codons_rna": [
+        "CUA",
+        "CUC",
+        "CUG",
+        "CUU",
+        "UUA",
+        "UUG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "K",
+      "three_letter": "Lys",
+      "name_es": "Lisina",
+      "name_en": "Lysine",
+      "category": "Básico",
+      "charge": "Positiva",
+      "polarity": "Polar",
+      "side_chain": "Amino",
+      "mass": 128.1741,
+      "description": "Interactúa con grupos negativos y puede sufrir múltiples modificaciones.",
+      "codons_dna": [
+        "AAA",
+        "AAG"
+      ],
+      "codons_rna": [
+        "AAA",
+        "AAG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "M",
+      "three_letter": "Met",
+      "name_es": "Metionina",
+      "name_en": "Methionine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Tioéter",
+      "mass": 131.1926,
+      "description": "ATG actúa normalmente como codón de inicio y aporta metionina.",
+      "codons_dna": [
+        "ATG"
+      ],
+      "codons_rna": [
+        "AUG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "F",
+      "three_letter": "Phe",
+      "name_es": "Fenilalanina",
+      "name_en": "Phenylalanine",
+      "category": "Aromático",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Fenilo",
+      "mass": 147.1766,
+      "description": "Aromático e hidrofóbico; participa en el empaquetamiento de proteínas.",
+      "codons_dna": [
+        "TTC",
+        "TTT"
+      ],
+      "codons_rna": [
+        "UUC",
+        "UUU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "P",
+      "three_letter": "Pro",
+      "name_es": "Prolina",
+      "name_en": "Proline",
+      "category": "Especial",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Anillo pirrolidina",
+      "mass": 97.1167,
+      "description": "Restringe la cadena y puede generar giros o interrumpir hélices.",
+      "codons_dna": [
+        "CCA",
+        "CCC",
+        "CCG",
+        "CCT"
+      ],
+      "codons_rna": [
+        "CCA",
+        "CCC",
+        "CCG",
+        "CCU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "S",
+      "three_letter": "Ser",
+      "name_es": "Serina",
+      "name_en": "Serine",
+      "category": "Polar sin carga",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Hidroxilo",
+      "mass": 87.0782,
+      "description": "Puede formar enlaces de hidrógeno y ser fosforilada.",
+      "codons_dna": [
+        "AGC",
+        "AGT",
+        "TCA",
+        "TCC",
+        "TCG",
+        "TCT"
+      ],
+      "codons_rna": [
+        "AGC",
+        "AGU",
+        "UCA",
+        "UCC",
+        "UCG",
+        "UCU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "T",
+      "three_letter": "Thr",
+      "name_es": "Treonina",
+      "name_en": "Threonine",
+      "category": "Polar sin carga",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Hidroxilo",
+      "mass": 101.1051,
+      "description": "Puede ser fosforilada y participar en enlaces de hidrógeno.",
+      "codons_dna": [
+        "ACA",
+        "ACC",
+        "ACG",
+        "ACT"
+      ],
+      "codons_rna": [
+        "ACA",
+        "ACC",
+        "ACG",
+        "ACU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "W",
+      "three_letter": "Trp",
+      "name_es": "Triptófano",
+      "name_en": "Tryptophan",
+      "category": "Aromático",
+      "charge": "Neutra",
+      "polarity": "Mayormente hidrofóbica",
+      "side_chain": "Indol",
+      "mass": 186.2132,
+      "description": "El aminoácido canónico de mayor masa; absorbe luz ultravioleta.",
+      "codons_dna": [
+        "TGG"
+      ],
+      "codons_rna": [
+        "UGG"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "Y",
+      "three_letter": "Tyr",
+      "name_es": "Tirosina",
+      "name_en": "Tyrosine",
+      "category": "Aromático",
+      "charge": "Neutra",
+      "polarity": "Polar aromática",
+      "side_chain": "Fenol",
+      "mass": 163.176,
+      "description": "Aromático con grupo hidroxilo; puede ser fosforilado.",
+      "codons_dna": [
+        "TAC",
+        "TAT"
+      ],
+      "codons_rna": [
+        "UAC",
+        "UAU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "V",
+      "three_letter": "Val",
+      "name_es": "Valina",
+      "name_en": "Valine",
+      "category": "No polar",
+      "charge": "Neutra",
+      "polarity": "Hidrofóbica",
+      "side_chain": "Alifática ramificada",
+      "mass": 99.1326,
+      "description": "Favorece el núcleo hidrofóbico de proteínas.",
+      "codons_dna": [
+        "GTA",
+        "GTC",
+        "GTG",
+        "GTT"
+      ],
+      "codons_rna": [
+        "GUA",
+        "GUC",
+        "GUG",
+        "GUU"
+      ],
+      "canonical": true
+    },
+    {
+      "one_letter": "U",
+      "three_letter": "Sec",
+      "name_es": "Selenocisteína",
+      "name_en": "Selenocysteine",
+      "category": "Especial",
+      "charge": "Neutra",
+      "polarity": "Polar",
+      "side_chain": "Selenol",
+      "mass": 150.0388,
+      "description": "Aminoácido proteinogénico especial. UGA puede recodificarse como selenocisteína cuando existen señales celulares específicas.",
+      "codons_dna": [],
+      "codons_rna": [
+        "UGA (recodificación especial)"
+      ],
+      "canonical": false
+    },
+    {
+      "one_letter": "O",
+      "three_letter": "Pyl",
+      "name_es": "Pirrolisina",
+      "name_en": "Pyrrolysine",
+      "category": "Especial",
+      "charge": "Positiva débil",
+      "polarity": "Polar",
+      "side_chain": "Pirrolina",
+      "mass": null,
+      "description": "Aminoácido proteinogénico especial presente en algunos microorganismos; no forma parte habitual del proteoma humano.",
+      "codons_dna": [],
+      "codons_rna": [
+        "UAG (recodificación especial en algunos organismos)"
+      ],
+      "canonical": false
+    }
+  ],
+  "codons": [
+    {
+      "dna": "AAA",
+      "rna": "AAA",
+      "amino_acid": "K",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "K",
+      "amino_acid_mitochondrial_human": "K"
+    },
+    {
+      "dna": "AAC",
+      "rna": "AAC",
+      "amino_acid": "N",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "N",
+      "amino_acid_mitochondrial_human": "N"
+    },
+    {
+      "dna": "AAG",
+      "rna": "AAG",
+      "amino_acid": "K",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "K",
+      "amino_acid_mitochondrial_human": "K"
+    },
+    {
+      "dna": "AAT",
+      "rna": "AAU",
+      "amino_acid": "N",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "N",
+      "amino_acid_mitochondrial_human": "N"
+    },
+    {
+      "dna": "ACA",
+      "rna": "ACA",
+      "amino_acid": "T",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "T",
+      "amino_acid_mitochondrial_human": "T"
+    },
+    {
+      "dna": "ACC",
+      "rna": "ACC",
+      "amino_acid": "T",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "T",
+      "amino_acid_mitochondrial_human": "T"
+    },
+    {
+      "dna": "ACG",
+      "rna": "ACG",
+      "amino_acid": "T",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "T",
+      "amino_acid_mitochondrial_human": "T"
+    },
+    {
+      "dna": "ACT",
+      "rna": "ACU",
+      "amino_acid": "T",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "T",
+      "amino_acid_mitochondrial_human": "T"
+    },
+    {
+      "dna": "AGA",
+      "rna": "AGA",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "*"
+    },
+    {
+      "dna": "AGC",
+      "rna": "AGC",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "AGG",
+      "rna": "AGG",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "*"
+    },
+    {
+      "dna": "AGT",
+      "rna": "AGU",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "ATA",
+      "rna": "AUA",
+      "amino_acid": "I",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "I",
+      "amino_acid_mitochondrial_human": "M"
+    },
+    {
+      "dna": "ATC",
+      "rna": "AUC",
+      "amino_acid": "I",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "I",
+      "amino_acid_mitochondrial_human": "I"
+    },
+    {
+      "dna": "ATG",
+      "rna": "AUG",
+      "amino_acid": "M",
+      "is_start": true,
+      "is_stop": false,
+      "amino_acid_standard": "M",
+      "amino_acid_mitochondrial_human": "M"
+    },
+    {
+      "dna": "ATT",
+      "rna": "AUU",
+      "amino_acid": "I",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "I",
+      "amino_acid_mitochondrial_human": "I"
+    },
+    {
+      "dna": "CAA",
+      "rna": "CAA",
+      "amino_acid": "Q",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "Q",
+      "amino_acid_mitochondrial_human": "Q"
+    },
+    {
+      "dna": "CAC",
+      "rna": "CAC",
+      "amino_acid": "H",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "H",
+      "amino_acid_mitochondrial_human": "H"
+    },
+    {
+      "dna": "CAG",
+      "rna": "CAG",
+      "amino_acid": "Q",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "Q",
+      "amino_acid_mitochondrial_human": "Q"
+    },
+    {
+      "dna": "CAT",
+      "rna": "CAU",
+      "amino_acid": "H",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "H",
+      "amino_acid_mitochondrial_human": "H"
+    },
+    {
+      "dna": "CCA",
+      "rna": "CCA",
+      "amino_acid": "P",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "P",
+      "amino_acid_mitochondrial_human": "P"
+    },
+    {
+      "dna": "CCC",
+      "rna": "CCC",
+      "amino_acid": "P",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "P",
+      "amino_acid_mitochondrial_human": "P"
+    },
+    {
+      "dna": "CCG",
+      "rna": "CCG",
+      "amino_acid": "P",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "P",
+      "amino_acid_mitochondrial_human": "P"
+    },
+    {
+      "dna": "CCT",
+      "rna": "CCU",
+      "amino_acid": "P",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "P",
+      "amino_acid_mitochondrial_human": "P"
+    },
+    {
+      "dna": "CGA",
+      "rna": "CGA",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "R"
+    },
+    {
+      "dna": "CGC",
+      "rna": "CGC",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "R"
+    },
+    {
+      "dna": "CGG",
+      "rna": "CGG",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "R"
+    },
+    {
+      "dna": "CGT",
+      "rna": "CGU",
+      "amino_acid": "R",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "R",
+      "amino_acid_mitochondrial_human": "R"
+    },
+    {
+      "dna": "CTA",
+      "rna": "CUA",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "CTC",
+      "rna": "CUC",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "CTG",
+      "rna": "CUG",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "CTT",
+      "rna": "CUU",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "GAA",
+      "rna": "GAA",
+      "amino_acid": "E",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "E",
+      "amino_acid_mitochondrial_human": "E"
+    },
+    {
+      "dna": "GAC",
+      "rna": "GAC",
+      "amino_acid": "D",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "D",
+      "amino_acid_mitochondrial_human": "D"
+    },
+    {
+      "dna": "GAG",
+      "rna": "GAG",
+      "amino_acid": "E",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "E",
+      "amino_acid_mitochondrial_human": "E"
+    },
+    {
+      "dna": "GAT",
+      "rna": "GAU",
+      "amino_acid": "D",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "D",
+      "amino_acid_mitochondrial_human": "D"
+    },
+    {
+      "dna": "GCA",
+      "rna": "GCA",
+      "amino_acid": "A",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "A",
+      "amino_acid_mitochondrial_human": "A"
+    },
+    {
+      "dna": "GCC",
+      "rna": "GCC",
+      "amino_acid": "A",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "A",
+      "amino_acid_mitochondrial_human": "A"
+    },
+    {
+      "dna": "GCG",
+      "rna": "GCG",
+      "amino_acid": "A",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "A",
+      "amino_acid_mitochondrial_human": "A"
+    },
+    {
+      "dna": "GCT",
+      "rna": "GCU",
+      "amino_acid": "A",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "A",
+      "amino_acid_mitochondrial_human": "A"
+    },
+    {
+      "dna": "GGA",
+      "rna": "GGA",
+      "amino_acid": "G",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "G",
+      "amino_acid_mitochondrial_human": "G"
+    },
+    {
+      "dna": "GGC",
+      "rna": "GGC",
+      "amino_acid": "G",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "G",
+      "amino_acid_mitochondrial_human": "G"
+    },
+    {
+      "dna": "GGG",
+      "rna": "GGG",
+      "amino_acid": "G",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "G",
+      "amino_acid_mitochondrial_human": "G"
+    },
+    {
+      "dna": "GGT",
+      "rna": "GGU",
+      "amino_acid": "G",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "G",
+      "amino_acid_mitochondrial_human": "G"
+    },
+    {
+      "dna": "GTA",
+      "rna": "GUA",
+      "amino_acid": "V",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "V",
+      "amino_acid_mitochondrial_human": "V"
+    },
+    {
+      "dna": "GTC",
+      "rna": "GUC",
+      "amino_acid": "V",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "V",
+      "amino_acid_mitochondrial_human": "V"
+    },
+    {
+      "dna": "GTG",
+      "rna": "GUG",
+      "amino_acid": "V",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "V",
+      "amino_acid_mitochondrial_human": "V"
+    },
+    {
+      "dna": "GTT",
+      "rna": "GUU",
+      "amino_acid": "V",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "V",
+      "amino_acid_mitochondrial_human": "V"
+    },
+    {
+      "dna": "TAA",
+      "rna": "UAA",
+      "amino_acid": "*",
+      "is_start": false,
+      "is_stop": true,
+      "amino_acid_standard": "*",
+      "amino_acid_mitochondrial_human": "*"
+    },
+    {
+      "dna": "TAC",
+      "rna": "UAC",
+      "amino_acid": "Y",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "Y",
+      "amino_acid_mitochondrial_human": "Y"
+    },
+    {
+      "dna": "TAG",
+      "rna": "UAG",
+      "amino_acid": "*",
+      "is_start": false,
+      "is_stop": true,
+      "amino_acid_standard": "*",
+      "amino_acid_mitochondrial_human": "*"
+    },
+    {
+      "dna": "TAT",
+      "rna": "UAU",
+      "amino_acid": "Y",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "Y",
+      "amino_acid_mitochondrial_human": "Y"
+    },
+    {
+      "dna": "TCA",
+      "rna": "UCA",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "TCC",
+      "rna": "UCC",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "TCG",
+      "rna": "UCG",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "TCT",
+      "rna": "UCU",
+      "amino_acid": "S",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "S",
+      "amino_acid_mitochondrial_human": "S"
+    },
+    {
+      "dna": "TGA",
+      "rna": "UGA",
+      "amino_acid": "*",
+      "is_start": false,
+      "is_stop": true,
+      "amino_acid_standard": "*",
+      "amino_acid_mitochondrial_human": "W"
+    },
+    {
+      "dna": "TGC",
+      "rna": "UGC",
+      "amino_acid": "C",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "C",
+      "amino_acid_mitochondrial_human": "C"
+    },
+    {
+      "dna": "TGG",
+      "rna": "UGG",
+      "amino_acid": "W",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "W",
+      "amino_acid_mitochondrial_human": "W"
+    },
+    {
+      "dna": "TGT",
+      "rna": "UGU",
+      "amino_acid": "C",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "C",
+      "amino_acid_mitochondrial_human": "C"
+    },
+    {
+      "dna": "TTA",
+      "rna": "UUA",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "TTC",
+      "rna": "UUC",
+      "amino_acid": "F",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "F",
+      "amino_acid_mitochondrial_human": "F"
+    },
+    {
+      "dna": "TTG",
+      "rna": "UUG",
+      "amino_acid": "L",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "L",
+      "amino_acid_mitochondrial_human": "L"
+    },
+    {
+      "dna": "TTT",
+      "rna": "UUU",
+      "amino_acid": "F",
+      "is_start": false,
+      "is_stop": false,
+      "amino_acid_standard": "F",
+      "amino_acid_mitochondrial_human": "F"
+    }
+  ],
+  "signals": {
+    "standard_start": [
+      {
+        "dna": "ATG",
+        "rna": "AUG",
+        "amino_acid": "M",
+        "name_es": "Metionina"
+      }
+    ],
+    "standard_stop": [
+      {
+        "dna": "TAA",
+        "rna": "UAA"
+      },
+      {
+        "dna": "TAG",
+        "rna": "UAG"
+      },
+      {
+        "dna": "TGA",
+        "rna": "UGA"
+      }
+    ]
+  },
+  "genetic_codes": {
+    "standard": {
+      "table_number": 1,
+      "description_es": "Código genético estándar usado para la mayoría de genes nucleares humanos."
+    },
+    "human_mitochondrial": {
+      "table_number": 2,
+      "description_es": "Código mitocondrial de vertebrados usado por la mitocondria humana.",
+      "differences_from_standard": [
+        {
+          "dna": "ATA",
+          "rna": "AUA",
+          "standard": "I",
+          "mitochondrial": "M"
+        },
+        {
+          "dna": "TGA",
+          "rna": "UGA",
+          "standard": "*",
+          "mitochondrial": "W"
+        },
+        {
+          "dna": "AGA",
+          "rna": "AGA",
+          "standard": "R",
+          "mitochondrial": "*"
+        },
+        {
+          "dna": "AGG",
+          "rna": "AGG",
+          "standard": "R",
+          "mitochondrial": "*"
+        }
+      ]
+    }
+  },
+  "iupac_dna_symbols": [
+    {
+      "symbol": "A",
+      "name_es": "Adenina",
+      "possible_bases": [
+        "A"
+      ],
+      "complement": "T",
+      "ambiguous": false
+    },
+    {
+      "symbol": "C",
+      "name_es": "Citosina",
+      "possible_bases": [
+        "C"
+      ],
+      "complement": "G",
+      "ambiguous": false
+    },
+    {
+      "symbol": "G",
+      "name_es": "Guanina",
+      "possible_bases": [
+        "G"
+      ],
+      "complement": "C",
+      "ambiguous": false
+    },
+    {
+      "symbol": "T",
+      "name_es": "Timina",
+      "possible_bases": [
+        "T"
+      ],
+      "complement": "A",
+      "ambiguous": false
+    },
+    {
+      "symbol": "R",
+      "name_es": "Purina",
+      "possible_bases": [
+        "A",
+        "G"
+      ],
+      "complement": "Y",
+      "ambiguous": true
+    },
+    {
+      "symbol": "Y",
+      "name_es": "Pirimidina",
+      "possible_bases": [
+        "C",
+        "T"
+      ],
+      "complement": "R",
+      "ambiguous": true
+    },
+    {
+      "symbol": "S",
+      "name_es": "Enlace fuerte",
+      "possible_bases": [
+        "G",
+        "C"
+      ],
+      "complement": "S",
+      "ambiguous": true
+    },
+    {
+      "symbol": "W",
+      "name_es": "Enlace débil",
+      "possible_bases": [
+        "A",
+        "T"
+      ],
+      "complement": "W",
+      "ambiguous": true
+    },
+    {
+      "symbol": "K",
+      "name_es": "Ceto",
+      "possible_bases": [
+        "G",
+        "T"
+      ],
+      "complement": "M",
+      "ambiguous": true
+    },
+    {
+      "symbol": "M",
+      "name_es": "Amino",
+      "possible_bases": [
+        "A",
+        "C"
+      ],
+      "complement": "K",
+      "ambiguous": true
+    },
+    {
+      "symbol": "B",
+      "name_es": "No A",
+      "possible_bases": [
+        "C",
+        "G",
+        "T"
+      ],
+      "complement": "V",
+      "ambiguous": true
+    },
+    {
+      "symbol": "D",
+      "name_es": "No C",
+      "possible_bases": [
+        "A",
+        "G",
+        "T"
+      ],
+      "complement": "H",
+      "ambiguous": true
+    },
+    {
+      "symbol": "H",
+      "name_es": "No G",
+      "possible_bases": [
+        "A",
+        "C",
+        "T"
+      ],
+      "complement": "D",
+      "ambiguous": true
+    },
+    {
+      "symbol": "V",
+      "name_es": "No T",
+      "possible_bases": [
+        "A",
+        "C",
+        "G"
+      ],
+      "complement": "B",
+      "ambiguous": true
+    },
+    {
+      "symbol": "N",
+      "name_es": "Cualquier base",
+      "possible_bases": [
+        "A",
+        "C",
+        "G",
+        "T"
+      ],
+      "complement": "N",
+      "ambiguous": true
+    }
+  ],
+  "sources": [
+    {
+      "id": "ncbi-genetic-codes",
+      "name": "NCBI Genetic Codes",
+      "authority": "NCBI",
+      "url": "https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi",
+      "accessed": "2026-07-10",
+      "purpose": "Tablas de traducción genética estándar y mitocondrial de vertebrados."
+    },
+    {
+      "id": "ncbi-grch38",
+      "name": "Homo sapiens genome assembly GRCh38.p14",
+      "authority": "NCBI Datasets",
+      "url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_000001405.40/",
+      "accessed": "2026-07-10",
+      "purpose": "Referencia humana GRCh38.p14."
+    },
+    {
+      "id": "ncbi-t2t",
+      "name": "Homo sapiens genome assembly T2T-CHM13v2.0",
+      "authority": "NCBI Datasets",
+      "url": "https://www.ncbi.nlm.nih.gov/datasets/genome/GCF_009914755.1/",
+      "accessed": "2026-07-10",
+      "purpose": "Ensamblaje humano telómero a telómero."
+    },
+    {
+      "id": "uniprot-human",
+      "name": "Homo sapiens reference proteome UP000005640",
+      "authority": "UniProt",
+      "url": "https://www.uniprot.org/proteomes/UP000005640",
+      "accessed": "2026-07-10",
+      "purpose": "Referencia del proteoma humano."
+    },
+    {
+      "id": "nhgri-hgrp",
+      "name": "Human Genome Reference Program",
+      "authority": "NHGRI",
+      "url": "https://www.genome.gov/Funded-Programs-Projects/Human-Genome-Reference-Program",
+      "accessed": "2026-07-10",
+      "purpose": "Referencia humana y transición hacia representaciones pangenómicas."
+    },
+    {
+      "id": "hprc-draft",
+      "name": "A draft human pangenome reference",
+      "authority": "Human Pangenome Reference Consortium / Nature",
+      "url": "https://www.nature.com/articles/s41586-023-05896-x",
+      "accessed": "2026-07-10",
+      "purpose": "Fundamento científico del primer borrador de pangenoma humano basado en múltiples ensamblajes haplotípicos."
+    },
+    {
+      "id": "encode",
+      "name": "ENCODE Project",
+      "authority": "NHGRI",
+      "url": "https://www.genome.gov/Funded-Programs-Projects/ENCODE-Project-ENCyclopedia-Of-DNA-Elements",
+      "accessed": "2026-07-10",
+      "purpose": "Elementos funcionales y regulación del genoma."
+    },
+    {
+      "id": "epigenomics",
+      "name": "Epigenomics Fact Sheet",
+      "authority": "NHGRI",
+      "url": "https://www.genome.gov/about-genomics/fact-sheets/Epigenomics-Fact-Sheet",
+      "accessed": "2026-07-10",
+      "purpose": "Marcas epigenómicas y regulación sin cambios en la secuencia."
+    },
+    {
+      "id": "4dn",
+      "name": "4D Nucleome Program",
+      "authority": "NIH Common Fund",
+      "url": "https://commonfund.nih.gov/4DNucleome",
+      "accessed": "2026-07-10",
+      "purpose": "Organización tridimensional del núcleo y sus cambios temporales."
+    },
+    {
+      "id": "igvf",
+      "name": "Impact of Genomic Variation on Function Consortium",
+      "authority": "NHGRI",
+      "url": "https://www.genome.gov/Funded-Programs-Projects/Impact-of-Genomic-Variation-on-Function-Consortium",
+      "accessed": "2026-07-10",
+      "purpose": "Conectar variación genómica, función molecular y fenotipo."
+    },
+    {
+      "id": "human-cell-atlas",
+      "name": "Human Cell Atlas",
+      "authority": "Human Cell Atlas Consortium",
+      "url": "https://www.humancellatlas.org/",
+      "accessed": "2026-07-10",
+      "purpose": "Mapas de tipos y estados celulares humanos a resolución de célula única."
+    },
+    {
+      "id": "smaht",
+      "name": "Somatic Mosaicism across Human Tissues",
+      "authority": "NIH Common Fund",
+      "url": "https://commonfund.nih.gov/smaht",
+      "accessed": "2026-07-10",
+      "purpose": "Variación somática entre células y tejidos a lo largo de la vida."
+    },
+    {
+      "id": "dna-repair",
+      "name": "DNA Repair — Molecular Biology of the Cell",
+      "authority": "NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26879/",
+      "accessed": "2026-07-10",
+      "purpose": "Mecanismos de reparación y mantenimiento de la estabilidad genómica."
+    },
+    {
+      "id": "g4-review",
+      "name": "DNA G-quadruplexes in the human genome",
+      "authority": "Nature Reviews Molecular Cell Biology / PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28225080/",
+      "accessed": "2026-07-10",
+      "purpose": "Estructuras G-cuádruplex y su detección en contextos genómicos."
+    },
+    {
+      "id": "triplex-review",
+      "name": "RNA-DNA triplexes: molecular mechanisms and functional roles",
+      "authority": "PubMed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38582689/",
+      "accessed": "2026-07-10",
+      "purpose": "Tríplex RNA-ADN y regulación genómica."
+    },
+    {
+      "id": "nih-crispr",
+      "name": "The CRISPR Revolution",
+      "authority": "NIH",
+      "url": "https://www.nih.gov/about-nih/nih-turning-discovery-into-health-/transformative-technologies/crispr-revolution",
+      "accessed": "2026-07-10",
+      "purpose": "Edición genómica y aplicaciones experimentales."
+    }
+  ],
+  "reference_assemblies": [
+    {
+      "id": "grch38",
+      "organism": "Homo sapiens",
+      "taxon_id": 9606,
+      "assembly_name": "GRCh38.p14",
+      "refseq_accession": "GCF_000001405.40",
+      "genbank_accession": "GCA_000001405.29",
+      "assembly_level": "Chromosome",
+      "category": "reference genome",
+      "status": "current in this manifest",
+      "recommended_use": [
+        "compatibilidad con anotaciones y herramientas consolidadas",
+        "comparación con estudios basados en hg38"
+      ],
+      "source_id": "ncbi-grch38"
+    },
+    {
+      "id": "t2t-chm13",
+      "organism": "Homo sapiens",
+      "taxon_id": 9606,
+      "assembly_name": "T2T-CHM13v2.0",
+      "refseq_accession": "GCF_009914755.1",
+      "genbank_accession": "GCA_009914755.4",
+      "assembly_level": "Complete Genome",
+      "category": "alternate reference",
+      "status": "current in this manifest",
+      "recommended_use": [
+        "estudio de regiones antes incompletas",
+        "comparación de ensamblajes de alta continuidad"
+      ],
+      "source_id": "ncbi-t2t"
+    }
+  ],
+  "proteomes": [
+    {
+      "id": "UP000005640",
+      "organism": "Homo sapiens",
+      "taxon_id": 9606,
+      "provider": "UniProt",
+      "type": "reference proteome",
+      "source_id": "uniprot-human",
+      "notes": [
+        "Puede consultarse el subconjunto revisado de UniProtKB/Swiss-Prot o un conjunto más amplio según la consulta.",
+        "Las isoformas y el número de registros cambian con las versiones de la base."
+      ]
+    }
+  ],
+  "human_chromosomes": [
+    {
+      "name": "1",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "2",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "3",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "4",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "5",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "6",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "7",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "8",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "9",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "10",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "11",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "12",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "13",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "14",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "15",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "16",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "17",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "18",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "19",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "20",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "21",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "22",
+      "category": "autosome",
+      "copy_number_note": "Dos copias en un genoma diploide típico; pueden existir variaciones."
+    },
+    {
+      "name": "X",
+      "category": "sex chromosome",
+      "copy_number_note": "La cantidad depende del complemento cromosómico individual."
+    },
+    {
+      "name": "Y",
+      "category": "sex chromosome",
+      "copy_number_note": "Puede estar ausente o presente según el complemento cromosómico individual."
+    },
+    {
+      "name": "MT",
+      "category": "mitochondrial",
+      "copy_number_note": "Genoma circular presente en múltiples copias por célula."
+    }
+  ],
+  "concepts": [
+    {
+      "term": "Nucleótido",
+      "definition_es": "Unidad formada por una base nitrogenada, un azúcar y uno o más grupos fosfato."
+    },
+    {
+      "term": "Codón",
+      "definition_es": "Triplete de nucleótidos de ARN mensajero que especifica un aminoácido o una señal de parada."
+    },
+    {
+      "term": "Anticodón",
+      "definition_es": "Triplete complementario del ARN de transferencia que reconoce un codón del ARN mensajero."
+    },
+    {
+      "term": "Gen",
+      "definition_es": "Región de ADN que contribuye a producir un ARN funcional y, en muchos casos, una proteína."
+    },
+    {
+      "term": "Transcripción",
+      "definition_es": "Proceso mediante el cual se sintetiza ARN usando ADN como molde."
+    },
+    {
+      "term": "Traducción",
+      "definition_es": "Proceso por el cual el ribosoma interpreta codones del ARN mensajero y ensambla una cadena de aminoácidos."
+    },
+    {
+      "term": "Marco de lectura",
+      "definition_es": "Forma de agrupar una secuencia en tripletes consecutivos; una secuencia tiene tres marcos por hebra."
+    },
+    {
+      "term": "Mutación",
+      "definition_es": "Cambio en una secuencia genética. Puede ser silencioso, cambiar un aminoácido o introducir/eliminar una parada, entre otros efectos."
+    },
+    {
+      "term": "Proteína",
+      "definition_es": "Cadena de aminoácidos que se pliega y puede cumplir funciones estructurales, catalíticas, reguladoras o de transporte."
+    },
+    {
+      "term": "Código genético",
+      "definition_es": "Correspondencia entre codones y aminoácidos o señales de terminación."
+    },
+    {
+      "term": "Genoma",
+      "definition_es": "Conjunto de material genético de un organismo o sistema biológico."
+    },
+    {
+      "term": "Exón",
+      "definition_es": "Segmento de un transcrito maduro que permanece después del procesamiento del ARN."
+    },
+    {
+      "term": "Intrón",
+      "definition_es": "Segmento transcrito que normalmente se elimina durante el empalme del pre-ARNm."
+    },
+    {
+      "term": "CDS",
+      "definition_es": "Región codificante que comienza en un codón de inicio y termina en un codón de parada, según una anotación."
+    },
+    {
+      "term": "ORF",
+      "definition_es": "Marco abierto de lectura: tramo potencialmente traducible delimitado por reglas de inicio y parada."
+    },
+    {
+      "term": "Isoforma",
+      "definition_es": "Forma molecular alternativa producida desde un mismo gen o entrada proteica."
+    },
+    {
+      "term": "Alelo",
+      "definition_es": "Versión de una secuencia en un locus determinado."
+    },
+    {
+      "term": "Locus",
+      "definition_es": "Posición o región definida dentro de un genoma."
+    },
+    {
+      "term": "Haplotipo",
+      "definition_es": "Combinación de variantes que tienden a heredarse conjuntamente."
+    },
+    {
+      "term": "Transcriptoma",
+      "definition_es": "Conjunto de moléculas de ARN presentes bajo una condición determinada."
+    },
+    {
+      "term": "Proteoma",
+      "definition_es": "Conjunto de proteínas que se consideran expresadas por un organismo, tejido, célula o condición."
+    },
+    {
+      "term": "Hebra codificante",
+      "definition_es": "Hebra de ADN cuya secuencia coincide con el ARNm salvo T por U."
+    },
+    {
+      "term": "Hebra molde",
+      "definition_es": "Hebra de ADN usada como molde complementario durante la transcripción."
+    },
+    {
+      "term": "Contenido GC",
+      "definition_es": "Proporción de guanina y citosina respecto de las bases consideradas en una secuencia."
+    },
+    {
+      "term": "FASTA",
+      "definition_es": "Formato textual para representar una o más secuencias precedidas por encabezados que comienzan con >."
+    },
+    {
+      "term": "GFF3",
+      "definition_es": "Formato tabular para describir características y anotaciones sobre secuencias genómicas."
+    },
+    {
+      "term": "Ensamblaje genómico",
+      "definition_es": "Representación computacional construida a partir de lecturas o secuencias, organizada en contigs y scaffolds."
+    },
+    {
+      "term": "Genoma de referencia",
+      "definition_es": "Representación acordada para describir coordenadas; no representa por sí sola toda la diversidad humana."
+    },
+    {
+      "term": "Pangenoma",
+      "definition_es": "Representación de la diversidad genómica de una especie mediante múltiples secuencias, rutas o ensamblajes, en lugar de una sola referencia lineal."
+    },
+    {
+      "term": "Enhancer",
+      "definition_es": "Elemento regulador que puede aumentar la actividad de uno o más genes en contextos celulares específicos."
+    },
+    {
+      "term": "Epigenoma",
+      "definition_es": "Conjunto de modificaciones químicas y estados de cromatina asociados con la regulación del genoma."
+    },
+    {
+      "term": "Cromatina",
+      "definition_es": "Complejo de DNA, histonas y otras proteínas que organiza y regula el genoma dentro del núcleo."
+    },
+    {
+      "term": "Mosaicismo somático",
+      "definition_es": "Presencia de poblaciones celulares con variantes genómicas diferentes dentro de un mismo individuo, originadas después de la concepción."
+    },
+    {
+      "term": "Célula única",
+      "definition_es": "Enfoque que mide moléculas o estados en células individuales en vez de promediar una población."
+    },
+    {
+      "term": "Genómica espacial",
+      "definition_es": "Medición molecular que conserva información sobre la posición de células o señales dentro del tejido."
+    },
+    {
+      "term": "G-cuádruplex",
+      "definition_es": "Estructura local no canónica formada por cuartetos de guanina; una predicción de motivo no demuestra su formación biológica."
+    },
+    {
+      "term": "Evidencia causal",
+      "definition_es": "Resultado que apoya que una perturbación produce un efecto, distinguiéndose de una simple asociación."
+    },
+    {
+      "term": "Frecuencia alélica observada",
+      "definition_es": "Proporción de lecturas que apoyan un alelo; no es idéntica a la fracción de células portadoras y está sujeta a sesgos técnicos."
+    }
+  ],
+  "molecules": [
+    {
+      "name_es": "ADN",
+      "full_name_es": "Ácido desoxirribonucleico",
+      "components": [
+        "Desoxirribosa",
+        "Fosfato",
+        "Base nitrogenada"
+      ],
+      "bases": [
+        "A",
+        "C",
+        "G",
+        "T"
+      ],
+      "role_es": "Almacena información genética en células humanas."
+    },
+    {
+      "name_es": "ARN",
+      "full_name_es": "Ácido ribonucleico",
+      "components": [
+        "Ribosa",
+        "Fosfato",
+        "Base nitrogenada"
+      ],
+      "bases": [
+        "A",
+        "C",
+        "G",
+        "U"
+      ],
+      "role_es": "Participa en la expresión y regulación de la información genética."
+    },
+    {
+      "name_es": "Nucleósido",
+      "components": [
+        "Azúcar",
+        "Base nitrogenada"
+      ],
+      "role_es": "Estructura sin grupo fosfato."
+    },
+    {
+      "name_es": "Nucleótido",
+      "components": [
+        "Azúcar",
+        "Base nitrogenada",
+        "Uno o más fosfatos"
+      ],
+      "role_es": "Unidad básica de ADN y ARN."
+    }
+  ],
+  "processes": [
+    {
+      "name_es": "Replicación",
+      "input": "ADN",
+      "output": "ADN",
+      "summary_es": "Copia la molécula de ADN antes de la división celular."
+    },
+    {
+      "name_es": "Transcripción",
+      "input": "ADN",
+      "output": "ARN",
+      "summary_es": "Produce una molécula de ARN usando una hebra de ADN como molde."
+    },
+    {
+      "name_es": "Traducción",
+      "input": "ARN mensajero",
+      "output": "Cadena de aminoácidos",
+      "summary_es": "El ribosoma lee codones y ensambla una cadena polipeptídica."
+    },
+    {
+      "name_es": "Empalme",
+      "input": "pre-ARNm",
+      "output": "ARNm maduro",
+      "summary_es": "Elimina intrones y une exones; puede producir isoformas alternativas."
+    },
+    {
+      "name_es": "Maduración proteica",
+      "input": "Polipéptido",
+      "output": "Proteína madura",
+      "summary_es": "Incluye plegamiento, cortes y modificaciones posteriores a la traducción."
+    },
+    {
+      "name_es": "Reparación del ADN",
+      "input": "ADN dañado",
+      "output": "ADN reparado o señalización",
+      "summary_es": "Conjunto de mecanismos que detectan y corrigen lesiones del ADN."
+    }
+  ],
+  "mutation_types": [
+    {
+      "id": "substitution",
+      "name_es": "Sustitución",
+      "level": "nucleotide",
+      "effect_es": "Una base se reemplaza por otra."
+    },
+    {
+      "id": "transition",
+      "name_es": "Transición",
+      "level": "nucleotide",
+      "effect_es": "Sustitución entre purinas o entre pirimidinas."
+    },
+    {
+      "id": "transversion",
+      "name_es": "Transversión",
+      "level": "nucleotide",
+      "effect_es": "Sustitución entre una purina y una pirimidina."
+    },
+    {
+      "id": "insertion",
+      "name_es": "Inserción",
+      "level": "sequence",
+      "effect_es": "Se agregan una o más bases."
+    },
+    {
+      "id": "deletion",
+      "name_es": "Deleción",
+      "level": "sequence",
+      "effect_es": "Se eliminan una o más bases."
+    },
+    {
+      "id": "frameshift",
+      "name_es": "Cambio de marco",
+      "level": "coding-sequence",
+      "effect_es": "Una inserción o deleción no múltiplo de tres altera el marco de lectura."
+    },
+    {
+      "id": "synonymous",
+      "name_es": "Sinónima",
+      "level": "codon",
+      "effect_es": "El codón cambia pero conserva el mismo aminoácido."
+    },
+    {
+      "id": "missense",
+      "name_es": "Cambio de sentido",
+      "level": "codon",
+      "effect_es": "El codón pasa a codificar otro aminoácido."
+    },
+    {
+      "id": "nonsense",
+      "name_es": "Sin sentido",
+      "level": "codon",
+      "effect_es": "El cambio genera una señal de parada."
+    },
+    {
+      "id": "stop-loss",
+      "name_es": "Pérdida de parada",
+      "level": "codon",
+      "effect_es": "Una señal de parada pasa a codificar un aminoácido."
+    },
+    {
+      "id": "start-loss",
+      "name_es": "Pérdida de inicio",
+      "level": "codon",
+      "effect_es": "Se altera un codón de inicio anotado."
+    }
+  ],
+  "evidence_levels": [
+    {
+      "id": "observed",
+      "name_es": "Observación directa",
+      "description_es": "Dato medido en una muestra mediante un ensayo explícito y controles apropiados.",
+      "rank": 4
+    },
+    {
+      "id": "experimentally_supported",
+      "name_es": "Apoyo experimental",
+      "description_es": "Conclusión respaldada por uno o más experimentos, pero dependiente del contexto biológico y del diseño.",
+      "rank": 3
+    },
+    {
+      "id": "computational_prediction",
+      "name_es": "Predicción computacional",
+      "description_es": "Resultado inferido por un algoritmo o modelo; requiere validación independiente.",
+      "rank": 2
+    },
+    {
+      "id": "hypothesis",
+      "name_es": "Hipótesis",
+      "description_es": "Explicación plausible aún no demostrada de manera suficiente.",
+      "rank": 1
+    },
+    {
+      "id": "unknown",
+      "name_es": "Evidencia no determinada",
+      "description_es": "No existe información suficiente para asignar un nivel.",
+      "rank": 0
+    }
+  ],
+  "genome_representations": [
+    {
+      "id": "linear_reference",
+      "name_es": "Referencia lineal",
+      "unit": "sequence",
+      "description_es": "Una secuencia principal por cromosoma usada como sistema de coordenadas.",
+      "strengths": [
+        "compatibilidad",
+        "coordenadas sencillas"
+      ],
+      "limitations": [
+        "sesgo hacia los haplotipos representados",
+        "representación limitada de variación estructural"
+      ],
+      "source_ids": [
+        "nhgri-hgrp"
+      ]
+    },
+    {
+      "id": "telomere_to_telomere",
+      "name_es": "Ensamblaje telómero a telómero",
+      "unit": "assembly",
+      "description_es": "Ensamblaje continuo que reduce o elimina vacíos en regiones repetitivas difíciles.",
+      "strengths": [
+        "mayor continuidad",
+        "mejor acceso a centrómeros y repeticiones"
+      ],
+      "limitations": [
+        "un ensamblaje no representa toda la diversidad humana"
+      ],
+      "source_ids": [
+        "nhgri-hgrp"
+      ]
+    },
+    {
+      "id": "pangenome_graph",
+      "name_es": "Pangenoma en grafo",
+      "unit": "graph",
+      "description_es": "Representa rutas alternativas derivadas de múltiples haplotipos y ensamblajes.",
+      "strengths": [
+        "mayor diversidad",
+        "mejor representación de variantes complejas"
+      ],
+      "limitations": [
+        "coordenadas y herramientas más complejas",
+        "requiere gobernanza de versiones"
+      ],
+      "source_ids": [
+        "nhgri-hgrp",
+        "hprc-draft"
+      ]
+    }
+  ],
+  "research_frontiers": [
+    {
+      "id": "human_pangenome",
+      "order": 1,
+      "title_es": "Pangenoma y diversidad humana",
+      "question_es": "¿Cómo representar la diversidad de secuencias y variantes estructurales sin depender de una sola referencia lineal?",
+      "why_open_es": "La diversidad humana contiene rutas, inserciones y reorganizaciones que una única secuencia no representa completamente.",
+      "current_approaches": [
+        "ensamblajes haplotípicos",
+        "grafos pangenómicos",
+        "lecturas largas",
+        "comparación de variantes estructurales"
+      ],
+      "data_types": [
+        "FASTA/FASTQ",
+        "GFA",
+        "VCF",
+        "BAM/CRAM"
+      ],
+      "maturity": "active_reference_infrastructure",
+      "evidence_level": "observed",
+      "source_ids": [
+        "nhgri-hgrp",
+        "hprc-draft"
+      ]
+    },
+    {
+      "id": "functional_non_coding",
+      "order": 2,
+      "title_es": "Función del genoma no codificante",
+      "question_es": "¿Qué regiones regulan genes, producen ARN funcional o cumplen funciones estructurales en cada contexto celular?",
+      "why_open_es": "Una señal bioquímica no demuestra por sí sola una función necesaria, y la actividad cambia entre tejidos y condiciones.",
+      "current_approaches": [
+        "ENCODE",
+        "ensayos de accesibilidad",
+        "ChIP-seq",
+        "CRISPR screens",
+        "reporter assays"
+      ],
+      "data_types": [
+        "BED",
+        "bigWig",
+        "BAM",
+        "matrices de actividad"
+      ],
+      "maturity": "active_mapping_and_validation",
+      "evidence_level": "experimentally_supported",
+      "source_ids": [
+        "encode"
+      ]
+    },
+    {
+      "id": "epigenetic_regulation",
+      "order": 3,
+      "title_es": "Regulación y epigenómica",
+      "question_es": "¿Cómo se combinan metilación, histonas, accesibilidad y factores de transcripción para activar o silenciar genes?",
+      "why_open_es": "Las marcas son dinámicas, específicas de célula y no siempre causales.",
+      "current_approaches": [
+        "bisulfite sequencing",
+        "CUT&RUN",
+        "ChIP-seq",
+        "ATAC-seq",
+        "perturbación genética"
+      ],
+      "data_types": [
+        "BED",
+        "bigWig",
+        "matrices de metilación",
+        "fragmentos ATAC"
+      ],
+      "maturity": "active_context_specific_modeling",
+      "evidence_level": "experimentally_supported",
+      "source_ids": [
+        "epigenomics",
+        "encode"
+      ]
+    },
+    {
+      "id": "nuclear_architecture",
+      "order": 4,
+      "title_es": "Organización 3D y 4D del genoma",
+      "question_es": "¿Cómo influyen los contactos, bucles y dominios cromatínicos, y cómo cambian durante el tiempo y el desarrollo?",
+      "why_open_es": "Las estructuras varían entre células, estados y escalas, y distinguir correlación de causalidad sigue siendo difícil.",
+      "current_approaches": [
+        "Hi-C",
+        "Micro-C",
+        "SPRITE",
+        "imagen de cromatina",
+        "modelado espacial"
+      ],
+      "data_types": [
+        "pairs",
+        "cool/mcool",
+        "matrices de contacto",
+        "imágenes espaciales"
+      ],
+      "maturity": "active_multiscale_mapping",
+      "evidence_level": "observed",
+      "source_ids": [
+        "4dn"
+      ]
+    },
+    {
+      "id": "variant_to_function",
+      "order": 5,
+      "title_es": "De variante a función y fenotipo",
+      "question_es": "¿Cómo una variante altera mecanismos moleculares, estados celulares y rasgos complejos?",
+      "why_open_es": "Muchas variantes tienen efectos pequeños, contextuales o combinatorios y actúan mediante regulación distante.",
+      "current_approaches": [
+        "MPRA",
+        "edición saturada",
+        "QTL",
+        "modelos de secuencia",
+        "ensayos celulares"
+      ],
+      "data_types": [
+        "VCF",
+        "matrices de actividad",
+        "expresión",
+        "fenotipos"
+      ],
+      "maturity": "active_causal_frameworks",
+      "evidence_level": "experimentally_supported",
+      "source_ids": [
+        "igvf"
+      ]
+    },
+    {
+      "id": "single_cell_spatial",
+      "order": 6,
+      "title_es": "Genómica de célula única y espacial",
+      "question_es": "¿Qué tipos y estados celulares existen y cómo se organizan e interactúan en tejidos?",
+      "why_open_es": "Las células son heterogéneas, dinámicas y sensibles al muestreo, disociación y profundidad de medición.",
+      "current_approaches": [
+        "scRNA-seq",
+        "scATAC-seq",
+        "multiome",
+        "transcriptómica espacial",
+        "atlas celulares"
+      ],
+      "data_types": [
+        "matrices dispersas",
+        "h5ad",
+        "loom",
+        "coordenadas espaciales"
+      ],
+      "maturity": "active_atlas_construction",
+      "evidence_level": "observed",
+      "source_ids": [
+        "human-cell-atlas"
+      ]
+    },
+    {
+      "id": "somatic_mosaicism",
+      "order": 7,
+      "title_es": "Mosaicismo somático",
+      "question_es": "¿Qué mutaciones aparecen después de la concepción, en qué células y cómo afectan desarrollo, envejecimiento y enfermedad?",
+      "why_open_es": "Las variantes raras son difíciles de distinguir de errores técnicos y pueden ser específicas de tejido.",
+      "current_approaches": [
+        "duplex sequencing",
+        "lectura larga",
+        "secuenciación unicelular",
+        "catálogos multitejido"
+      ],
+      "data_types": [
+        "FASTQ",
+        "BAM/CRAM",
+        "VCF somático",
+        "conteos alélicos"
+      ],
+      "maturity": "active_detection_and_benchmarking",
+      "evidence_level": "observed",
+      "source_ids": [
+        "smaht"
+      ]
+    },
+    {
+      "id": "genome_maintenance",
+      "order": 8,
+      "title_es": "Daño, reparación y envejecimiento",
+      "question_es": "¿Cómo seleccionan las células vías de reparación y por qué algunos daños se acumulan o producen inestabilidad?",
+      "why_open_es": "Las vías se solapan, dependen del ciclo celular y generan resultados distintos según el contexto.",
+      "current_approaches": [
+        "ensayos de daño",
+        "mutational signatures",
+        "knockouts",
+        "reporteros de reparación"
+      ],
+      "data_types": [
+        "imágenes",
+        "secuencias",
+        "perfiles de mutaciones",
+        "proteómica"
+      ],
+      "maturity": "mechanisms_known_context_open",
+      "evidence_level": "experimentally_supported",
+      "source_ids": [
+        "dna-repair"
+      ]
+    },
+    {
+      "id": "noncanonical_structures",
+      "order": 9,
+      "title_es": "Estructuras no canónicas de ácidos nucleicos",
+      "question_es": "¿Cuándo se forman G-cuádruplex, tríplex, R-loops y otras estructuras, y qué funciones o riesgos generan?",
+      "why_open_es": "Un motivo de secuencia solo indica potencial; la formación real depende de cromatina, proteínas, tensión y condiciones celulares.",
+      "current_approaches": [
+        "predicción de motivos",
+        "anticuerpos o sondas estructurales",
+        "secuenciación específica",
+        "biofísica"
+      ],
+      "data_types": [
+        "FASTA",
+        "BED",
+        "señales de enriquecimiento",
+        "estructuras moleculares"
+      ],
+      "maturity": "active_detection_and_function",
+      "evidence_level": "computational_prediction",
+      "source_ids": [
+        "g4-review",
+        "triplex-review"
+      ]
+    },
+    {
+      "id": "genome_editing",
+      "order": 10,
+      "title_es": "Edición genómica segura y controlable",
+      "question_es": "¿Cómo editar el sitio, tejido y momento correctos minimizando efectos fuera de objetivo y consecuencias no previstas?",
+      "why_open_es": "La entrega, especificidad, reparación posterior, inmunogenicidad y seguimiento a largo plazo siguen condicionando el uso.",
+      "current_approaches": [
+        "CRISPR-Cas",
+        "edición de bases",
+        "prime editing",
+        "edición epigenética",
+        "validación off-target"
+      ],
+      "data_types": [
+        "amplicones",
+        "lecturas largas",
+        "perfiles off-target",
+        "fenotipos celulares"
+      ],
+      "maturity": "rapidly_developing",
+      "evidence_level": "experimentally_supported",
+      "source_ids": [
+        "nih-crispr",
+        "dna-repair"
+      ]
+    }
+  ],
+  "assay_catalog": [
+    {
+      "id": "wgs_short_read",
+      "name": "Whole-genome sequencing (lectura corta)",
+      "domain": "sequence_variation",
+      "measures_es": "Secuencia genómica mediante fragmentos cortos.",
+      "typical_outputs": [
+        "FASTQ",
+        "BAM/CRAM",
+        "VCF"
+      ],
+      "strengths": [
+        "madurez",
+        "costo relativo",
+        "cobertura amplia"
+      ],
+      "limitations": [
+        "regiones repetitivas",
+        "variantes estructurales complejas"
+      ],
+      "evidence_level": "observed"
+    },
+    {
+      "id": "long_read_wgs",
+      "name": "Whole-genome sequencing (lectura larga)",
+      "domain": "pangenome_and_structure",
+      "measures_es": "Moléculas largas para ensamblaje, fases y variantes estructurales.",
+      "typical_outputs": [
+        "FASTQ/BAM",
+        "FASTA",
+        "VCF",
+        "GFA"
+      ],
+      "strengths": [
+        "continuidad",
+        "fase haplotípica"
+      ],
+      "limitations": [
+        "errores y sesgos dependientes de plataforma",
+        "costo y almacenamiento"
+      ],
+      "evidence_level": "observed"
+    },
+    {
+      "id": "rna_seq",
+      "name": "RNA-seq",
+      "domain": "gene_expression",
+      "measures_es": "Abundancia y estructura de transcritos en una población celular.",
+      "typical_outputs": [
+        "FASTQ",
+        "BAM",
+        "matriz de conteos"
+      ],
+      "strengths": [
+        "expresión global",
+        "isoformas según protocolo"
+      ],
+      "limitations": [
+        "promedio de población",
+        "sesgos de preparación"
+      ],
+      "evidence_level": "observed"
+    },
+    {
+      "id": "sc_rna_seq",
+      "name": "Single-cell RNA-seq",
+      "domain": "single_cell",
+      "measures_es": "Transcritos capturados por célula individual.",
+      "typical_outputs": [
+        "matriz genes×células",
+        "h5ad",
+        "metadatos celulares"
+      ],
+      "strengths": [
+        "heterogeneidad",
+        "estados celulares"
+      ],
+      "limitations": [
+        "dropout",
+        "dobletes",
+        "efectos de lote"
+      ],
+      "evidence_level": "observed"
+    },
+    {
+      "id": "atac_seq",
+      "name": "ATAC-seq",
+      "domain": "chromatin_accessibility",
+      "measures_es": "Regiones de cromatina accesible.",
+      "typical_outputs": [
+        "BAM",
+        "BED peaks",
+        "bigWig"
+      ],
+      "strengths": [
+        "bajo material",
+        "resolución regulatoria"
+      ],
+      "limitations": [
+        "accesibilidad no equivale a función causal"
+      ],
+      "evidence_level": "observed"
+    },
+    {
+      "id": "chip_seq",
+      "name": "ChIP-seq / CUT&RUN",
+      "domain": "protein_dna_and_histones",
+      "measures_es": "Enriquecimiento de proteínas o marcas de histonas sobre regiones genómicas.",
+      "typical_outputs": [
+        "BAM",
+        "BED peaks",
+        "bigWig"
+      ],
+      "strengths": [
+        "contexto de unión o marca"
+      ],
+      "limitations": [
+        "calidad de anticuerpo",
+        "resolución y normalización"
+      ],
+      "evidence_level": "observed"
+    },
+    {
+      "id": "bisulfite_seq",
+      "name": "Secuenciación con bisulfito",
+      "domain": "dna_methylation",
+      "measures_es": "Metilación de citosinas, con restricciones químicas y de contexto.",
+      "typical_outputs": [
+        "conteos metilados/no metilados",
+        "BED-like"
+      ],
+      "strengths": [
+        "resolución por base"
+      ],
+      "limitations": [
+        "conversión química",
+        "distinción limitada de algunas modificaciones"
+      ],
+      "evidence_level": "observed"
+    },
+    {
+      "id": "hi_c",
+      "name": "Hi-C / Micro-C",
+      "domain": "nuclear_architecture",
+      "measures_es": "Frecuencia de proximidad entre pares de regiones genómicas.",
+      "typical_outputs": [
+        "pairs",
+        "cool/mcool",
+        "matriz de contactos"
+      ],
+      "strengths": [
+        "visión global 3D"
+      ],
+      "limitations": [
+        "promedio poblacional o ruido en célula única",
+        "contacto no implica regulación"
+      ],
+      "evidence_level": "observed"
+    },
+    {
+      "id": "mpra",
+      "name": "Massively Parallel Reporter Assay",
+      "domain": "variant_function",
+      "measures_es": "Actividad regulatoria de miles de secuencias o alelos en un sistema reportero.",
+      "typical_outputs": [
+        "conteos DNA/RNA",
+        "actividad por elemento"
+      ],
+      "strengths": [
+        "alto rendimiento",
+        "comparación alélica"
+      ],
+      "limitations": [
+        "contexto episomal o artificial",
+        "dependencia celular"
+      ],
+      "evidence_level": "experimentally_supported"
+    },
+    {
+      "id": "crispr_screen",
+      "name": "CRISPR screen",
+      "domain": "causal_perturbation",
+      "measures_es": "Efecto de perturbaciones genéticas o regulatorias sobre un fenotipo.",
+      "typical_outputs": [
+        "conteos de guías",
+        "efectos estimados"
+      ],
+      "strengths": [
+        "evidencia causal"
+      ],
+      "limitations": [
+        "off-target",
+        "eficiencia variable",
+        "contexto del modelo"
+      ],
+      "evidence_level": "experimentally_supported"
+    }
+  ],
+  "epigenetic_marks": [
+    {
+      "id": "5mc",
+      "name": "5-metilcitosina",
+      "molecule": "DNA",
+      "typical_association_es": "Regulación dependiente del contexto; en promotores puede asociarse con represión.",
+      "caution_es": "La asociación no es universal ni demuestra causalidad."
+    },
+    {
+      "id": "h3k4me3",
+      "name": "H3K4me3",
+      "molecule": "histone",
+      "typical_association_es": "Promotores activos o preparados.",
+      "caution_es": "La señal depende del tipo celular y del método."
+    },
+    {
+      "id": "h3k27ac",
+      "name": "H3K27ac",
+      "molecule": "histone",
+      "typical_association_es": "Promotores y enhancers activos.",
+      "caution_es": "Actividad bioquímica no equivale por sí sola a necesidad funcional."
+    },
+    {
+      "id": "h3k27me3",
+      "name": "H3K27me3",
+      "molecule": "histone",
+      "typical_association_es": "Represión mediada por Polycomb.",
+      "caution_es": "Puede coexistir con otros estados y variar durante el desarrollo."
+    }
+  ],
+  "chromatin_features": [
+    {
+      "id": "loop",
+      "name_es": "Bucle de cromatina",
+      "scale": "kilobases_to_megabases",
+      "description_es": "Contacto enriquecido entre regiones, a veces entre un regulador y un promotor."
+    },
+    {
+      "id": "tad",
+      "name_es": "Dominio de asociación topológica",
+      "scale": "hundreds_of_kilobases",
+      "description_es": "Región con contactos internos enriquecidos; sus límites son dependientes de resolución y contexto."
+    },
+    {
+      "id": "compartment",
+      "name_es": "Compartimento A/B",
+      "scale": "megabases",
+      "description_es": "Patrón amplio asociado con estados de cromatina más activos o inactivos."
+    },
+    {
+      "id": "territory",
+      "name_es": "Territorio cromosómico",
+      "scale": "chromosome",
+      "description_es": "Distribución espacial preferente de un cromosoma dentro del núcleo."
+    }
+  ],
+  "single_cell_modalities": [
+    {
+      "id": "scrna",
+      "name": "scRNA-seq",
+      "measures": [
+        "RNA capturado"
+      ],
+      "unit": "cell",
+      "main_challenges": [
+        "dropout",
+        "dobletes",
+        "lotes",
+        "anotación"
+      ]
+    },
+    {
+      "id": "scatac",
+      "name": "scATAC-seq",
+      "measures": [
+        "accesibilidad de cromatina"
+      ],
+      "unit": "cell",
+      "main_challenges": [
+        "matrices muy dispersas",
+        "profundidad",
+        "agregación"
+      ]
+    },
+    {
+      "id": "multiome",
+      "name": "Single-cell multiome",
+      "measures": [
+        "dos o más modalidades en la misma célula"
+      ],
+      "unit": "cell",
+      "main_challenges": [
+        "integración",
+        "coste",
+        "datos faltantes"
+      ]
+    },
+    {
+      "id": "spatial_transcriptomics",
+      "name": "Transcriptómica espacial",
+      "measures": [
+        "expresión y posición tisular"
+      ],
+      "unit": "spot_or_cell",
+      "main_challenges": [
+        "resolución",
+        "desconvolución",
+        "registro espacial"
+      ]
+    }
+  ],
+  "dna_repair_pathways": [
+    {
+      "id": "ber",
+      "name_es": "Reparación por escisión de bases",
+      "abbreviation": "BER",
+      "primary_damage": [
+        "bases modificadas pequeñas",
+        "sitios abásicos"
+      ],
+      "template_use": "local synthesis",
+      "notes_es": "Corrige lesiones que no distorsionan fuertemente la hélice."
+    },
+    {
+      "id": "ner",
+      "name_es": "Reparación por escisión de nucleótidos",
+      "abbreviation": "NER",
+      "primary_damage": [
+        "lesiones voluminosas",
+        "fotoproductos UV"
+      ],
+      "template_use": "opposite strand",
+      "notes_es": "Elimina un oligonucleótido alrededor de la lesión."
+    },
+    {
+      "id": "mmr",
+      "name_es": "Reparación de apareamientos erróneos",
+      "abbreviation": "MMR",
+      "primary_damage": [
+        "mismatches",
+        "pequeños indels de replicación"
+      ],
+      "template_use": "new strand discrimination",
+      "notes_es": "Aumenta la fidelidad posterior a la replicación."
+    },
+    {
+      "id": "hr",
+      "name_es": "Recombinación homóloga",
+      "abbreviation": "HR",
+      "primary_damage": [
+        "roturas de doble hebra"
+      ],
+      "template_use": "homologous template",
+      "notes_es": "Generalmente favorecida cuando existe cromátida hermana disponible."
+    },
+    {
+      "id": "nhej",
+      "name_es": "Unión de extremos no homólogos",
+      "abbreviation": "NHEJ",
+      "primary_damage": [
+        "roturas de doble hebra"
+      ],
+      "template_use": "none_or_minimal",
+      "notes_es": "Rápida, pero puede introducir pequeñas inserciones o deleciones."
+    }
+  ],
+  "noncanonical_structures": [
+    {
+      "id": "g_quadruplex",
+      "name_es": "G-cuádruplex",
+      "polymer": [
+        "DNA",
+        "RNA"
+      ],
+      "scope": "local",
+      "participants_es": "Cuatro tractos ricos en guanina, que pueden pertenecer a una o varias cadenas.",
+      "sequence_signal_es": "Motivos ricos en G permiten predicción de candidatos.",
+      "evidence_warning_es": "El motivo no prueba formación in vivo.",
+      "source_ids": [
+        "g4-review"
+      ]
+    },
+    {
+      "id": "triplex",
+      "name_es": "Tríplex",
+      "polymer": [
+        "DNA",
+        "RNA-DNA"
+      ],
+      "scope": "local",
+      "participants_es": "Una tercera cadena se asocia con una doble hélice mediante interacciones específicas.",
+      "sequence_signal_es": "Regiones homopurina/homopirimidina pueden favorecer tríplex.",
+      "evidence_warning_es": "La estabilidad depende de secuencia, orientación, pH, iones y proteínas.",
+      "source_ids": [
+        "triplex-review"
+      ]
+    },
+    {
+      "id": "r_loop",
+      "name_es": "R-loop",
+      "polymer": [
+        "RNA-DNA"
+      ],
+      "scope": "local",
+      "participants_es": "Híbrido RNA:DNA acompañado por una hebra de DNA desplazada.",
+      "sequence_signal_es": "No existe una regla de secuencia suficiente y universal.",
+      "evidence_warning_es": "La detección experimental y los controles son esenciales.",
+      "source_ids": [
+        "4dn"
+      ]
+    },
+    {
+      "id": "cruciform",
+      "name_es": "Cruciforme",
+      "polymer": [
+        "DNA"
+      ],
+      "scope": "local",
+      "participants_es": "Extrusión de horquillas desde repeticiones invertidas en DNA bicatenario.",
+      "sequence_signal_es": "Repeticiones invertidas indican potencial estructural.",
+      "evidence_warning_es": "La topología y tensión del DNA condicionan la formación.",
+      "source_ids": [
+        "dna-repair"
+      ]
+    }
+  ],
+  "genome_editing_tools": [
+    {
+      "id": "crispr_cas9",
+      "name": "CRISPR-Cas9",
+      "edit_class": "double_strand_break",
+      "capability_es": "Corte dirigido seguido por reparación celular.",
+      "main_risks": [
+        "off-target",
+        "indels no deseados",
+        "reordenamientos",
+        "entrega"
+      ],
+      "source_ids": [
+        "nih-crispr",
+        "dna-repair"
+      ]
+    },
+    {
+      "id": "base_editing",
+      "name": "Edición de bases",
+      "edit_class": "targeted_base_conversion",
+      "capability_es": "Conversión de ciertas bases sin una rotura de doble hebra programada.",
+      "main_risks": [
+        "ediciones bystander",
+        "off-target de DNA o RNA",
+        "ventana limitada"
+      ],
+      "source_ids": [
+        "nih-crispr"
+      ]
+    },
+    {
+      "id": "prime_editing",
+      "name": "Prime editing",
+      "edit_class": "templated_small_edit",
+      "capability_es": "Introduce sustituciones e indels pequeños mediante transcriptasa inversa y guía extendida.",
+      "main_risks": [
+        "eficiencia variable",
+        "subproductos",
+        "entrega compleja"
+      ],
+      "source_ids": [
+        "nih-crispr"
+      ]
+    },
+    {
+      "id": "epigenome_editing",
+      "name": "Edición epigenómica",
+      "edit_class": "regulatory_modulation",
+      "capability_es": "Dirige efectores regulatorios sin cambiar necesariamente la secuencia de DNA.",
+      "main_risks": [
+        "duración incierta",
+        "especificidad regulatoria",
+        "efectos contextuales"
+      ],
+      "source_ids": [
+        "nih-crispr",
+        "epigenomics"
+      ]
+    }
+  ],
+  "ethical_principles": [
+    {
+      "id": "non_clinical",
+      "name_es": "Separación entre investigación y clínica",
+      "requirement_es": "No presentar resultados exploratorios como diagnóstico, pronóstico o decisión terapéutica."
+    },
+    {
+      "id": "privacy",
+      "name_es": "Privacidad genómica",
+      "requirement_es": "No versionar datos personales; minimizar, cifrar y gobernar cualquier dato humano real."
+    },
+    {
+      "id": "consent",
+      "name_es": "Consentimiento y uso permitido",
+      "requirement_es": "Respetar consentimiento, restricciones de uso, legislación y aprobación institucional."
+    },
+    {
+      "id": "representation",
+      "name_es": "Representación y equidad",
+      "requirement_es": "Documentar sesgos poblacionales y evitar extrapolar referencias incompletas a toda la humanidad."
+    },
+    {
+      "id": "reproducibility",
+      "name_es": "Reproducibilidad y trazabilidad",
+      "requirement_es": "Registrar versiones, parámetros, fuentes, controles y nivel de evidencia."
+    }
+  ],
+  "game": {
+    "modes": [
+      {
+        "id": "codon_to_amino",
+        "name_es": "Codón → aminoácido"
+      },
+      {
+        "id": "amino_to_codon",
+        "name_es": "Aminoácido → codón"
+      },
+      {
+        "id": "dna_to_rna",
+        "name_es": "ADN → ARN"
+      },
+      {
+        "id": "complement",
+        "name_es": "Complemento de ADN"
+      },
+      {
+        "id": "mixed",
+        "name_es": "Desafío mixto"
+      }
+    ],
+    "scoring": {
+      "correct_base": 100,
+      "streak_bonus": 20,
+      "rounds": 10,
+      "lives": 3
+    },
+    "role": "Módulo educativo secundario para ejercitación; no es el propósito central del repositorio."
+  }
+}

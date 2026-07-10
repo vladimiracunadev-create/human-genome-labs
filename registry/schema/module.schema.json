@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://human-genome-labs.local/schemas/module.schema.json",
+  "title": "Human Genome Labs module manifest",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "titleEs",
+    "version",
+    "maturity",
+    "capabilities",
+    "evidenceLevel",
+    "clinicalUse",
+    "inputs",
+    "outputs",
+    "limitations",
+    "sourceIds",
+    "roadmap"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0.0"
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+    },
+    "titleEs": {
+      "type": "string",
+      "minLength": 3
+    },
+    "descriptionEs": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "maturity": {
+      "enum": [
+        "concept",
+        "experimental",
+        "validated",
+        "stable",
+        "deprecated"
+      ]
+    },
+    "package": {
+      "type": "string"
+    },
+    "entrypoint": {
+      "type": "string"
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "evidenceLevel": {
+      "enum": [
+        "observed",
+        "experimentally_supported",
+        "computational_prediction",
+        "hypothesis",
+        "unknown"
+      ]
+    },
+    "clinicalUse": {
+      "const": false
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1
+    },
+    "sourceIds": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "owners": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "roadmap": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

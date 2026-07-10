@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "sequence-analysis",
+  "titleEs": "Análisis molecular de secuencias",
+  "descriptionEs": "Normalización, composición, transcripción, traducción, ORF y uso de codones.",
+  "version": "1.0.0",
+  "maturity": "validated",
+  "package": "@human-genome-labs/genetics-core",
+  "entrypoint": "packages/genetics-core/src/index.ts",
+  "capabilities": [
+    "sequence.summary",
+    "sequence.translation",
+    "sequence.orf",
+    "sequence.codon_usage"
+  ],
+  "evidenceLevel": "computational_prediction",
+  "clinicalUse": false,
+  "inputs": [
+    "FASTA",
+    "DNA",
+    "RNA"
+  ],
+  "outputs": [
+    "ScientificResult",
+    "JSON",
+    "protein-sequence"
+  ],
+  "limitations": [
+    "Una ORF o traducción computacional no demuestra expresión ni función."
+  ],
+  "sourceIds": [
+    "ncbi-genetic-codes"
+  ],
+  "owners": [
+    "core-maintainers"
+  ],
+  "roadmap": [
+    "soporte de códigos genéticos adicionales",
+    "pruebas de propiedades"
+  ]
+}

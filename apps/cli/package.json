@@ -1,0 +1,8 @@
+{
+  "name": "@human-genome-labs/cli",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CLI científica para FASTA, variantes, estructuras candidatas y fronteras genómicas.",
+  "license": "MIT"
+}

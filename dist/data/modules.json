@@ -1,0 +1,566 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectVersion": "1.0.0",
+  "policy": "Una capacidad debe pertenecer a un módulo, declarar madurez, evidencia y limitaciones.",
+  "modules": [
+    {
+      "schemaVersion": "1.0.0",
+      "id": "sequence-analysis",
+      "titleEs": "Análisis molecular de secuencias",
+      "descriptionEs": "Normalización, composición, transcripción, traducción, ORF y uso de codones.",
+      "version": "1.0.0",
+      "maturity": "validated",
+      "package": "@human-genome-labs/genetics-core",
+      "entrypoint": "packages/genetics-core/src/index.ts",
+      "capabilities": [
+        "sequence.summary",
+        "sequence.translation",
+        "sequence.orf",
+        "sequence.codon_usage"
+      ],
+      "evidenceLevel": "computational_prediction",
+      "clinicalUse": false,
+      "inputs": [
+        "FASTA",
+        "DNA",
+        "RNA"
+      ],
+      "outputs": [
+        "ScientificResult",
+        "JSON",
+        "protein-sequence"
+      ],
+      "limitations": [
+        "Una ORF o traducción computacional no demuestra expresión ni función."
+      ],
+      "sourceIds": [
+        "ncbi-genetic-codes"
+      ],
+      "owners": [
+        "core-maintainers"
+      ],
+      "roadmap": [
+        "soporte de códigos genéticos adicionales",
+        "pruebas de propiedades"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "variant-analysis",
+      "titleEs": "Efecto molecular de variantes",
+      "descriptionEs": "Aplicación de variantes simples y comparación exploratoria sobre CDS aisladas.",
+      "version": "1.0.0",
+      "maturity": "validated",
+      "package": "@human-genome-labs/genetics-core",
+      "entrypoint": "packages/genetics-core/src/index.ts",
+      "capabilities": [
+        "variant.apply",
+        "variant.coding_effect",
+        "variant.allele_fraction"
+      ],
+      "evidenceLevel": "computational_prediction",
+      "clinicalUse": false,
+      "inputs": [
+        "DNA",
+        "VCF-like variant",
+        "read counts"
+      ],
+      "outputs": [
+        "ScientificResult",
+        "molecular-effect"
+      ],
+      "limitations": [
+        "No anota transcritos reales ni clasifica variantes clínicamente."
+      ],
+      "sourceIds": [
+        "igvf",
+        "igvf"
+      ],
+      "owners": [
+        "core-maintainers"
+      ],
+      "roadmap": [
+        "normalización de variantes",
+        "integración con anotaciones GFF3"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "noncanonical-structures",
+      "titleEs": "Estructuras no canónicas",
+      "descriptionEs": "Detección de motivos candidatos y modelado de evidencia para G4, tríplex y otras conformaciones.",
+      "version": "0.3.0",
+      "maturity": "experimental",
+      "package": "@human-genome-labs/genetics-core",
+      "entrypoint": "packages/genetics-core/src/index.ts",
+      "capabilities": [
+        "structure.g4_candidate"
+      ],
+      "evidenceLevel": "computational_prediction",
+      "clinicalUse": false,
+      "inputs": [
+        "DNA"
+      ],
+      "outputs": [
+        "candidate-regions"
+      ],
+      "limitations": [
+        "Un motivo de secuencia no demuestra formación estructural in vivo."
+      ],
+      "sourceIds": [
+        "g4-review"
+      ],
+      "owners": [
+        "research-maintainers"
+      ],
+      "roadmap": [
+        "métodos alternativos",
+        "benchmarks con conjuntos publicados"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "somatic-observation",
+      "titleEs": "Observaciones de mosaicismo somático",
+      "descriptionEs": "Resumen estadístico de fracciones alélicas y trazabilidad de supuestos.",
+      "version": "0.2.0",
+      "maturity": "experimental",
+      "package": "@human-genome-labs/genetics-core",
+      "entrypoint": "packages/genetics-core/src/index.ts",
+      "capabilities": [
+        "somatic.allele_fraction"
+      ],
+      "evidenceLevel": "observed",
+      "clinicalUse": false,
+      "inputs": [
+        "read-counts"
+      ],
+      "outputs": [
+        "frequency-estimate",
+        "confidence-interval"
+      ],
+      "limitations": [
+        "La fracción de lecturas no equivale directamente a la fracción celular."
+      ],
+      "sourceIds": [
+        "smaht"
+      ],
+      "owners": [
+        "research-maintainers"
+      ],
+      "roadmap": [
+        "modelos beta-binomiales",
+        "filtros de calidad"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "pangenome",
+      "titleEs": "Representación de pangenomas",
+      "descriptionEs": "Contrato conceptual para referencias en grafo, haplotipos y rutas.",
+      "version": "0.1.0",
+      "maturity": "concept",
+      "capabilities": [
+        "pangenome.metadata"
+      ],
+      "evidenceLevel": "unknown",
+      "clinicalUse": false,
+      "inputs": [
+        "graph-reference",
+        "haplotypes"
+      ],
+      "outputs": [
+        "paths",
+        "graph-intervals"
+      ],
+      "limitations": [
+        "No incluye todavía un motor de grafos ni alineamiento."
+      ],
+      "sourceIds": [
+        "hprc-draft"
+      ],
+      "owners": [
+        "research-maintainers"
+      ],
+      "roadmap": [
+        "RFC de coordenadas en grafo",
+        "adaptadores GFA/GBZ"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "file-formats",
+      "titleEs": "Interoperabilidad de formatos",
+      "descriptionEs": "Lectores transparentes para FASTA, GFF3 y VCF con conversión explícita de coordenadas.",
+      "version": "1.0.0",
+      "maturity": "validated",
+      "package": "@human-genome-labs/file-formats",
+      "entrypoint": "packages/file-formats/src/index.ts",
+      "capabilities": [
+        "format.fasta",
+        "format.gff3",
+        "format.vcf"
+      ],
+      "evidenceLevel": "observed",
+      "clinicalUse": false,
+      "inputs": [
+        "FASTA",
+        "GFF3",
+        "VCF"
+      ],
+      "outputs": [
+        "typed-records",
+        "ScientificResult"
+      ],
+      "limitations": [
+        "Cobertura inicial sin BCF, BGZF, tabix ni extensiones completas."
+      ],
+      "sourceIds": [],
+      "owners": [
+        "core-maintainers"
+      ],
+      "roadmap": [
+        "serialización GFF3/VCF",
+        "índices y archivos comprimidos"
+      ]
+    },
+    {
+      "schemaVersion": "1.0.0",
+      "id": "organism-profiles",
+      "titleEs": "Perfiles de organismo",
+      "descriptionEs": "Contexto configurable de polímero, hebras, topología, compartimento y código genético.",
+      "version": "1.0.0",
+      "maturity": "validated",
+      "package": "@human-genome-labs/organism-profiles",
+      "entrypoint": "packages/organism-profiles/src/index.ts",
+      "capabilities": [
+        "profile.organism_context"
+      ],
+      "evidenceLevel": "observed",
+      "clinicalUse": false,
+      "inputs": [
+        "profile-id"
+      ],
+      "outputs": [
+        "organism-context"
+      ],
+      "limitations": [
+        "Los perfiles genéricos deben especializarse antes de análisis reales."
+      ],
+      "sourceIds": [],
+      "owners": [
+        "core-maintainers"
+      ],
+      "roadmap": [
+        "perfiles taxonómicos versionados",
+        "validación contra catálogos externos"
+      ]
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "sequence.summary",
+      "titleEs": "Resumen de secuencia",
+      "descriptionEs": "Composición, GC, símbolos ambiguos y entropía.",
+      "moduleId": "sequence-analysis",
+      "maturity": "validated",
+      "evidenceLevel": "computational_prediction",
+      "inputs": [
+        "DNA"
+      ],
+      "outputs": [
+        "sequence-summary"
+      ],
+      "interfaces": [
+        "library",
+        "cli",
+        "web"
+      ],
+      "limitations": [
+        "Las bases ambiguas requieren interpretación probabilística."
+      ]
+    },
+    {
+      "id": "sequence.translation",
+      "titleEs": "Traducción de secuencia",
+      "descriptionEs": "Traducción por hebra, marco y código genético.",
+      "moduleId": "sequence-analysis",
+      "maturity": "validated",
+      "evidenceLevel": "computational_prediction",
+      "inputs": [
+        "DNA"
+      ],
+      "outputs": [
+        "protein-sequence"
+      ],
+      "interfaces": [
+        "library",
+        "cli",
+        "web",
+        "game"
+      ],
+      "limitations": [
+        "No demuestra expresión proteica."
+      ]
+    },
+    {
+      "id": "sequence.orf",
+      "titleEs": "Detección de ORF",
+      "descriptionEs": "Busca marcos abiertos de lectura completos o incompletos.",
+      "moduleId": "sequence-analysis",
+      "maturity": "validated",
+      "evidenceLevel": "computational_prediction",
+      "inputs": [
+        "DNA"
+      ],
+      "outputs": [
+        "genomic-intervals",
+        "protein-sequence"
+      ],
+      "interfaces": [
+        "library",
+        "cli",
+        "web"
+      ],
+      "limitations": [
+        "Los ORF dependen del código y parámetros seleccionados."
+      ]
+    },
+    {
+      "id": "sequence.codon_usage",
+      "titleEs": "Uso de codones",
+      "descriptionEs": "Frecuencias de codones por marco.",
+      "moduleId": "sequence-analysis",
+      "maturity": "validated",
+      "evidenceLevel": "computational_prediction",
+      "inputs": [
+        "DNA"
+      ],
+      "outputs": [
+        "frequency-table"
+      ],
+      "interfaces": [
+        "library",
+        "cli"
+      ],
+      "limitations": [
+        "No corrige sesgos de muestreo ni expresión."
+      ]
+    },
+    {
+      "id": "variant.apply",
+      "titleEs": "Aplicación de variante",
+      "descriptionEs": "Aplica sustituciones e indels simples con verificación de REF.",
+      "moduleId": "variant-analysis",
+      "maturity": "validated",
+      "evidenceLevel": "computational_prediction",
+      "inputs": [
+        "DNA",
+        "variant"
+      ],
+      "outputs": [
+        "alternate-sequence"
+      ],
+      "interfaces": [
+        "library",
+        "cli"
+      ],
+      "limitations": [
+        "No normaliza ni alinea variantes complejas."
+      ]
+    },
+    {
+      "id": "variant.coding_effect",
+      "titleEs": "Efecto codificante exploratorio",
+      "descriptionEs": "Compara traducción de referencia y alternativa.",
+      "moduleId": "variant-analysis",
+      "maturity": "validated",
+      "evidenceLevel": "computational_prediction",
+      "inputs": [
+        "CDS",
+        "variant"
+      ],
+      "outputs": [
+        "molecular-effect"
+      ],
+      "interfaces": [
+        "library",
+        "cli",
+        "web"
+      ],
+      "limitations": [
+        "No es interpretación clínica."
+      ]
+    },
+    {
+      "id": "variant.allele_fraction",
+      "titleEs": "Fracción alélica observada",
+      "descriptionEs": "Calcula proporción e intervalo Wilson.",
+      "moduleId": "variant-analysis",
+      "maturity": "validated",
+      "evidenceLevel": "observed",
+      "inputs": [
+        "read-counts"
+      ],
+      "outputs": [
+        "frequency-estimate"
+      ],
+      "interfaces": [
+        "library",
+        "cli",
+        "web"
+      ],
+      "limitations": [
+        "No estima directamente fracción celular."
+      ]
+    },
+    {
+      "id": "structure.g4_candidate",
+      "titleEs": "Candidatos G-cuádruplex",
+      "descriptionEs": "Detecta patrones de cuatro tractos G.",
+      "moduleId": "noncanonical-structures",
+      "maturity": "experimental",
+      "evidenceLevel": "computational_prediction",
+      "inputs": [
+        "DNA"
+      ],
+      "outputs": [
+        "candidate-regions"
+      ],
+      "interfaces": [
+        "library",
+        "cli",
+        "web"
+      ],
+      "limitations": [
+        "Motivo no equivale a estructura formada."
+      ]
+    },
+    {
+      "id": "somatic.allele_fraction",
+      "titleEs": "Observación somática",
+      "descriptionEs": "Contrato experimental para observaciones de mosaicismo.",
+      "moduleId": "somatic-observation",
+      "maturity": "experimental",
+      "evidenceLevel": "observed",
+      "inputs": [
+        "read-counts"
+      ],
+      "outputs": [
+        "frequency-estimate"
+      ],
+      "interfaces": [
+        "library",
+        "cli"
+      ],
+      "limitations": [
+        "Requiere modelar pureza, ploidía y errores."
+      ]
+    },
+    {
+      "id": "pangenome.metadata",
+      "titleEs": "Metadatos de pangenoma",
+      "descriptionEs": "Representa conceptos de caminos, haplotipos y grafos.",
+      "moduleId": "pangenome",
+      "maturity": "concept",
+      "evidenceLevel": "unknown",
+      "inputs": [
+        "graph-reference"
+      ],
+      "outputs": [
+        "graph-metadata"
+      ],
+      "interfaces": [
+        "library"
+      ],
+      "limitations": [
+        "No existe motor de análisis implementado."
+      ]
+    },
+    {
+      "id": "format.fasta",
+      "titleEs": "Lectura y escritura FASTA",
+      "descriptionEs": "Parsea secuencias sin imponer un organismo.",
+      "moduleId": "file-formats",
+      "maturity": "validated",
+      "evidenceLevel": "observed",
+      "inputs": [
+        "FASTA"
+      ],
+      "outputs": [
+        "sequence-records"
+      ],
+      "interfaces": [
+        "library",
+        "cli"
+      ],
+      "limitations": [
+        "No indexa archivos grandes."
+      ]
+    },
+    {
+      "id": "format.gff3",
+      "titleEs": "Lectura GFF3",
+      "descriptionEs": "Parsea características y convierte coordenadas.",
+      "moduleId": "file-formats",
+      "maturity": "validated",
+      "evidenceLevel": "observed",
+      "inputs": [
+        "GFF3"
+      ],
+      "outputs": [
+        "genomic-features"
+      ],
+      "interfaces": [
+        "library",
+        "cli"
+      ],
+      "limitations": [
+        "No implementa todas las extensiones de proveedores."
+      ]
+    },
+    {
+      "id": "format.vcf",
+      "titleEs": "Lectura VCF",
+      "descriptionEs": "Parsea variantes, INFO, FORMAT y muestras.",
+      "moduleId": "file-formats",
+      "maturity": "validated",
+      "evidenceLevel": "observed",
+      "inputs": [
+        "VCF"
+      ],
+      "outputs": [
+        "variant-records"
+      ],
+      "interfaces": [
+        "library",
+        "cli"
+      ],
+      "limitations": [
+        "No normaliza variantes ni soporta BCF."
+      ]
+    },
+    {
+      "id": "profile.organism_context",
+      "titleEs": "Contexto de organismo",
+      "descriptionEs": "Selecciona polímero, hebras, topología y código genético.",
+      "moduleId": "organism-profiles",
+      "maturity": "validated",
+      "evidenceLevel": "observed",
+      "inputs": [
+        "profile-id"
+      ],
+      "outputs": [
+        "organism-context"
+      ],
+      "interfaces": [
+        "library",
+        "cli",
+        "web"
+      ],
+      "limitations": [
+        "La selección del perfil no reemplaza metadatos de muestra."
+      ]
+    }
+  ]
+}

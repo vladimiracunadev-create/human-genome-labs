@@ -1,0 +1,363 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://human-genome-labs.local/schemas/biology.schema.json",
+  "title": "Human Genome Labs Biology Database v3",
+  "description": "Base científica versionada para genética molecular y fronteras de investigación genómica. Los campos de predicción no constituyen evidencia clínica.",
+  "type": "object",
+  "required": [
+    "metadata",
+    "sources",
+    "reference_assemblies",
+    "proteomes",
+    "iupac_dna_symbols",
+    "bases",
+    "amino_acids",
+    "codons",
+    "signals",
+    "genetic_codes",
+    "concepts",
+    "evidence_levels",
+    "genome_representations",
+    "research_frontiers",
+    "assay_catalog",
+    "epigenetic_marks",
+    "chromatin_features",
+    "single_cell_modalities",
+    "dna_repair_pathways",
+    "noncanonical_structures",
+    "genome_editing_tools",
+    "ethical_principles"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": [
+        "title",
+        "version",
+        "schema_version",
+        "scope",
+        "limitations"
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "schema_version": {
+          "type": "string",
+          "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 20
+        },
+        "limitations": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "authority",
+          "url",
+          "accessed"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string"
+          },
+          "authority": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "accessed": {
+            "type": "string",
+            "format": "date"
+          },
+          "purpose": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "reference_assemblies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "assembly_name",
+          "refseq_accession",
+          "organism",
+          "taxon_id"
+        ]
+      }
+    },
+    "proteomes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "organism",
+          "taxon_id",
+          "provider"
+        ]
+      }
+    },
+    "iupac_dna_symbols": {
+      "type": "array",
+      "minItems": 15,
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "required": [
+          "symbol",
+          "possible_bases",
+          "complement"
+        ]
+      }
+    },
+    "bases": {
+      "type": "array",
+      "minItems": 5
+    },
+    "amino_acids": {
+      "type": "array",
+      "minItems": 20,
+      "items": {
+        "type": "object",
+        "required": [
+          "one_letter",
+          "three_letter",
+          "name_es",
+          "canonical",
+          "codons_dna"
+        ]
+      }
+    },
+    "codons": {
+      "type": "array",
+      "minItems": 64,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "required": [
+          "dna",
+          "rna",
+          "amino_acid_standard",
+          "amino_acid_mitochondrial_human"
+        ]
+      }
+    },
+    "signals": {
+      "type": "object"
+    },
+    "genetic_codes": {
+      "type": "object"
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "term",
+          "definition_es"
+        ]
+      }
+    },
+    "evidence_levels": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "$ref": "#/$defs/evidenceLevel"
+      }
+    },
+    "genome_representations": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name_es",
+          "unit",
+          "description_es",
+          "strengths",
+          "limitations",
+          "source_ids"
+        ]
+      }
+    },
+    "research_frontiers": {
+      "type": "array",
+      "minItems": 10,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "order",
+          "title_es",
+          "question_es",
+          "why_open_es",
+          "current_approaches",
+          "data_types",
+          "maturity",
+          "evidence_level",
+          "source_ids"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "order": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "title_es": {
+            "type": "string"
+          },
+          "question_es": {
+            "type": "string"
+          },
+          "why_open_es": {
+            "type": "string"
+          },
+          "current_approaches": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "data_types": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          },
+          "maturity": {
+            "type": "string"
+          },
+          "evidence_level": {
+            "$ref": "#/$defs/evidenceLevelId"
+          },
+          "source_ids": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "assay_catalog": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "domain",
+          "measures_es",
+          "typical_outputs",
+          "strengths",
+          "limitations",
+          "evidence_level"
+        ]
+      }
+    },
+    "epigenetic_marks": {
+      "type": "array",
+      "minItems": 1
+    },
+    "chromatin_features": {
+      "type": "array",
+      "minItems": 1
+    },
+    "single_cell_modalities": {
+      "type": "array",
+      "minItems": 1
+    },
+    "dna_repair_pathways": {
+      "type": "array",
+      "minItems": 1
+    },
+    "noncanonical_structures": {
+      "type": "array",
+      "minItems": 1
+    },
+    "genome_editing_tools": {
+      "type": "array",
+      "minItems": 1
+    },
+    "ethical_principles": {
+      "type": "array",
+      "minItems": 1
+    },
+    "game": {
+      "type": "object"
+    }
+  },
+  "$defs": {
+    "evidenceLevelId": {
+      "type": "string",
+      "enum": [
+        "observed",
+        "experimentally_supported",
+        "computational_prediction",
+        "hypothesis",
+        "unknown"
+      ]
+    },
+    "evidenceLevel": {
+      "type": "object",
+      "required": [
+        "id",
+        "name_es",
+        "description_es",
+        "rank"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/evidenceLevelId"
+        },
+        "name_es": {
+          "type": "string"
+        },
+        "description_es": {
+          "type": "string"
+        },
+        "rank": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+node_modules/
+.build/
+.claude/
+# dist/ se versiona intencionalmente como distribución web integrada.
+coverage/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example
+datasets/raw/*
+!datasets/raw/.gitkeep
+datasets/processed/*
+!datasets/processed/.gitkeep

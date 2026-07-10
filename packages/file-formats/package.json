@@ -1,0 +1,8 @@
+{
+  "name": "@human-genome-labs/file-formats",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Lectores y escritores mínimos, explícitos y verificables para FASTA, GFF3 y VCF.",
+  "license": "MIT"
+}

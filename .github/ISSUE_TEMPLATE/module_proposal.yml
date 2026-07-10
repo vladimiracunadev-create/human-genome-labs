@@ -1,0 +1,30 @@
+name: Propuesta de módulo
+about: Proponga una nueva capacidad científica evolutiva
+title: "[module] "
+labels: ["area:research", "maturity:concept"]
+body:
+  - type: input
+    id: question
+    attributes:
+      label: Pregunta científica
+    validations:
+      required: true
+  - type: dropdown
+    id: maturity
+    attributes:
+      label: Madurez inicial
+      options: [concept, experimental]
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia, fuentes y limitaciones
+    validations:
+      required: true
+  - type: textarea
+    id: inputs
+    attributes:
+      label: Entradas y salidas propuestas
+    validations:
+      required: true

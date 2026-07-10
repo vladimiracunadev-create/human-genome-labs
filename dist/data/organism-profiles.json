@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "1.0.0",
+  "profiles": [
+    {
+      "id": "homo-sapiens-nuclear",
+      "version": "1.0.0",
+      "taxonomyId": 9606,
+      "scientificName": "Homo sapiens",
+      "compartment": "nuclear",
+      "polymer": "DNA",
+      "strandedness": "double",
+      "topology": "linear",
+      "segmentation": "chromosomes",
+      "geneticCode": "standard",
+      "defaultReferenceAssembly": "GRCh38.p14",
+      "status": "validated",
+      "limitations": [
+        "El perfil no representa por sí solo diversidad poblacional ni pangenoma."
+      ]
+    },
+    {
+      "id": "homo-sapiens-mitochondrial",
+      "version": "1.0.0",
+      "taxonomyId": 9606,
+      "scientificName": "Homo sapiens",
+      "compartment": "mitochondrial",
+      "polymer": "DNA",
+      "strandedness": "double",
+      "topology": "circular",
+      "segmentation": "single_molecule",
+      "geneticCode": "human_mitochondrial",
+      "defaultReferenceAssembly": "NC_012920.1",
+      "status": "validated",
+      "limitations": [
+        "La heteroplasmia y las variantes estructurales requieren modelos adicionales."
+      ]
+    },
+    {
+      "id": "generic-prokaryote",
+      "version": "0.1.0",
+      "taxonomyId": null,
+      "scientificName": "Perfil procarionte genérico",
+      "compartment": "cellular",
+      "polymer": "DNA",
+      "strandedness": "double",
+      "topology": "configurable",
+      "segmentation": "configurable",
+      "geneticCode": "standard",
+      "defaultReferenceAssembly": null,
+      "status": "concept",
+      "limitations": [
+        "Debe especializarse con taxonomía, ensamblaje y código genético reales."
+      ]
+    },
+    {
+      "id": "generic-rna-virus",
+      "version": "0.1.0",
+      "taxonomyId": null,
+      "scientificName": "Perfil viral ARN genérico",
+      "compartment": "virion",
+      "polymer": "RNA",
+      "strandedness": "configurable",
+      "topology": "configurable",
+      "segmentation": "configurable",
+      "geneticCode": "host_dependent",
+      "defaultReferenceAssembly": null,
+      "status": "concept",
+      "limitations": [
+        "No sustituye una clasificación ICTV ni un perfil viral específico."
+      ]
+    }
+  ]
+}

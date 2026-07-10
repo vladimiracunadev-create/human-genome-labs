@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "file-formats",
+  "titleEs": "Interoperabilidad de formatos",
+  "descriptionEs": "Lectores transparentes para FASTA, GFF3 y VCF con conversión explícita de coordenadas.",
+  "version": "1.0.0",
+  "maturity": "validated",
+  "package": "@human-genome-labs/file-formats",
+  "entrypoint": "packages/file-formats/src/index.ts",
+  "capabilities": [
+    "format.fasta",
+    "format.gff3",
+    "format.vcf"
+  ],
+  "evidenceLevel": "observed",
+  "clinicalUse": false,
+  "inputs": [
+    "FASTA",
+    "GFF3",
+    "VCF"
+  ],
+  "outputs": [
+    "typed-records",
+    "ScientificResult"
+  ],
+  "limitations": [
+    "Cobertura inicial sin BCF, BGZF, tabix ni extensiones completas."
+  ],
+  "sourceIds": [],
+  "owners": [
+    "core-maintainers"
+  ],
+  "roadmap": [
+    "serialización GFF3/VCF",
+    "índices y archivos comprimidos"
+  ]
+}

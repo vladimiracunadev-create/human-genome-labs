@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0.0",
+  "id": "organism-profiles",
+  "titleEs": "Perfiles de organismo",
+  "descriptionEs": "Contexto configurable de polímero, hebras, topología, compartimento y código genético.",
+  "version": "1.0.0",
+  "maturity": "validated",
+  "package": "@human-genome-labs/organism-profiles",
+  "entrypoint": "packages/organism-profiles/src/index.ts",
+  "capabilities": [
+    "profile.organism_context"
+  ],
+  "evidenceLevel": "observed",
+  "clinicalUse": false,
+  "inputs": [
+    "profile-id"
+  ],
+  "outputs": [
+    "organism-context"
+  ],
+  "limitations": [
+    "Los perfiles genéricos deben especializarse antes de análisis reales."
+  ],
+  "sourceIds": [],
+  "owners": [
+    "core-maintainers"
+  ],
+  "roadmap": [
+    "perfiles taxonómicos versionados",
+    "validación contra catálogos externos"
+  ]
+}

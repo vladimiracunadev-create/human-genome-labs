@@ -1,0 +1,26 @@
+name: Error reproducible
+description: Informar un problema técnico o científico
+title: "[Bug]: "
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Pasos y secuencia mínima reproducible
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versión o commit
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Node, pnpm y sistema operativo

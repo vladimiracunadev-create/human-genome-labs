@@ -1,0 +1,16 @@
+- name: area:data
+  color: "1d76db"
+- name: area:core
+  color: "0052cc"
+- name: area:web
+  color: "5319e7"
+- name: area:research
+  color: "0e8a16"
+- name: area:architecture
+  color: "d93f0b"
+- name: maturity:concept
+  color: "ededed"
+- name: maturity:experimental
+  color: "fbca04"
+- name: maturity:validated
+  color: "0e8a16"

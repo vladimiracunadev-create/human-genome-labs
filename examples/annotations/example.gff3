@@ -1,0 +1,6 @@
+##gff-version 3
+##sequence-region chrDemo 1 60
+chrDemo	HGL	gene	1	45	.	+	.	ID=gene1;Name=GENE_DEMO
+chrDemo	HGL	mRNA	1	45	.	+	.	ID=tx1;Parent=gene1
+chrDemo	HGL	CDS	1	9	.	+	0	ID=cds1;Parent=tx1
+chrDemo	HGL	CDS	20	45	.	+	0	ID=cds2;Parent=tx1

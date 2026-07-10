@@ -1,0 +1,17 @@
+name: RFC arquitectónico
+about: Cambio de contrato, formato, coordenadas o compatibilidad
+title: "[RFC] "
+labels: ["area:architecture"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problema
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Propuesta, alternativas y riesgos
+    validations:
+      required: true

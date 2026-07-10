@@ -1,0 +1,20 @@
+import { createHash } from "node:crypto";
+import { mkdir, writeFile } from "node:fs/promises";
+import { join, resolve } from "node:path";
+const reviewedOnly = process.argv.includes("--reviewed");
+const query = reviewedOnly ? "proteome:UP000005640 AND reviewed:true" : "proteome:UP000005640";
+const url = new URL("https://rest.uniprot.org/uniprotkb/stream");
+url.searchParams.set("compressed", "true");
+url.searchParams.set("format", "fasta");
+url.searchParams.set("query", query);
+const response = await fetch(url, { headers: { "User-Agent": "human-genome-labs/3.0.0" } });
+if (!response.ok) throw new Error(`UniProt respondió ${response.status}.`);
+const bytes = new Uint8Array(await response.arrayBuffer());
+const destination = resolve("datasets/raw");
+await mkdir(destination, { recursive: true });
+const filename = reviewedOnly ? "UP000005640_reviewed.fasta.gz" : "UP000005640_all.fasta.gz";
+await writeFile(join(destination, filename), bytes);
+const hash = createHash("sha256").update(bytes).digest("hex");
+await writeFile(join(destination, `${filename}.sha256`), `${hash}  ${filename}
+`);
+console.log(`Proteoma descargado en datasets/raw/${filename}`);

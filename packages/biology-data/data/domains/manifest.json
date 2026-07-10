@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "merge_order": [
+    "metadata.json",
+    "molecular-foundations.json",
+    "references.json",
+    "systems-genomics.json",
+    "education.json"
+  ],
+  "generated_output": "../biology.json",
+  "rule": "Later files may not overwrite keys from earlier files."
+}

@@ -1,0 +1,33 @@
+{
+  "game": {
+    "modes": [
+      {
+        "id": "codon_to_amino",
+        "name_es": "Codón → aminoácido"
+      },
+      {
+        "id": "amino_to_codon",
+        "name_es": "Aminoácido → codón"
+      },
+      {
+        "id": "dna_to_rna",
+        "name_es": "ADN → ARN"
+      },
+      {
+        "id": "complement",
+        "name_es": "Complemento de ADN"
+      },
+      {
+        "id": "mixed",
+        "name_es": "Desafío mixto"
+      }
+    ],
+    "scoring": {
+      "correct_base": 100,
+      "streak_bonus": 20,
+      "rounds": 10,
+      "lives": 3
+    },
+    "role": "Módulo educativo secundario para ejercitación; no es el propósito central del repositorio."
+  }
+}

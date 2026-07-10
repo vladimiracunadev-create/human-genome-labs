@@ -1,0 +1,5 @@
+##fileformat=VCFv4.3
+##source=HumanGenomeLabs
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	SAMPLE_1
+chrDemo	4	var1	G	A	60	PASS	DP=100;AF=0.12	GT:DP:AD	0/1:100:88,12
+chrDemo	20	.	A	ATG	42	q10	DP=40	GT:DP	0/1:40

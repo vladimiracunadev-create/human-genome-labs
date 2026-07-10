@@ -1,0 +1,37 @@
+{
+  "name": "human-genome-labs",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plataforma científica evolutiva y reproducible para genética, genómica, formatos, evidencia, módulos experimentales y educación.",
+  "type": "module",
+  "packageManager": "pnpm@11.0.0",
+  "engines": {
+    "node": ">=20.0.0",
+    "pnpm": ">=11.0.0"
+  },
+  "scripts": {
+    "preinstall": "node tools/enforce-pnpm.cjs",
+    "data:bundle": "node tools/bundle-data.mjs",
+    "build": "node tools/build.mjs",
+    "clean": "node tools/clean.mjs",
+    "dev": "node tools/dev.mjs",
+    "test": "node tools/test.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "validate:data": "node tools/validate-data.mjs",
+    "validate:registry": "node tools/validate-registry.mjs",
+    "validate:docs": "node tools/validate-docs.mjs",
+    "check": "pnpm run data:bundle && pnpm run typecheck && pnpm run validate:data && pnpm run validate:registry && pnpm run validate:docs && pnpm run test && pnpm run build",
+    "cli": "node tools/run-cli.mjs",
+    "new:module": "node tools/create-module.mjs",
+    "integrity": "node tools/generate-integrity.mjs",
+    "download:grch38": "node tools/download-ncbi.mjs grch38",
+    "download:t2t": "node tools/download-ncbi.mjs t2t",
+    "download:proteome": "node tools/download-uniprot.mjs",
+    "serve:prebuilt": "node tools/server.mjs dist",
+    "verify:integrity": "node tools/verify-integrity.mjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  },
+  "license": "MIT"
+}

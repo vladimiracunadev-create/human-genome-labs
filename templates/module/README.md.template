@@ -1,0 +1,19 @@
+# {{title}}
+
+**Madurez:** `{{maturity}}` · **Versión inicial:** `0.1.0`
+
+## Pregunta científica
+
+Describa la pregunta y por qué no está resuelta por el núcleo.
+
+## Evidencia y limitaciones
+
+Declare qué es observado, predicho o hipotético. Ningún resultado debe presentarse como clínico.
+
+## Criterios para avanzar de madurez
+
+- Pruebas unitarias y de referencia.
+- Datos reproducibles.
+- Fuentes científicas trazables.
+- API documentada.
+- Comparación con herramientas o conjuntos conocidos.

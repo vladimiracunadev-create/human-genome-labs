@@ -1,0 +1,8 @@
+{
+  "name": "@human-genome-labs/organism-profiles",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Perfiles versionados de organismo, compartimento, polímero y código genético.",
+  "license": "MIT"
+}
