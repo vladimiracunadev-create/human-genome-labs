@@ -50,7 +50,7 @@ El repositorio es un monorepo con workspaces y usa pnpm 11 de forma exclusiva pa
 
 ### `pnpm check` falla en mi máquina, ¿qué reviso?
 
-Confirma **Node 20+** y **pnpm 11** (`corepack prepare pnpm@11.0.0 --activate`). `pnpm check` ejecuta bundle, typecheck, validaciones, tests y build; el error suele indicar el paso concreto. Si persiste, abre un issue (ver [SUPPORT](../SUPPORT.md)).
+Confirma **Node 22+** y **pnpm 11** (`corepack prepare pnpm@11.0.0 --activate`). `pnpm check` ejecuta bundle, typecheck, validaciones, tests y build; el error suele indicar el paso concreto. Si persiste, abre un issue (ver [SUPPORT](../SUPPORT.md)).
 
 ### ¿Cómo abro el laboratorio sin instalar dependencias?
 

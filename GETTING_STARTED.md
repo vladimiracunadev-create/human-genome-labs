@@ -17,7 +17,7 @@ O ejecuta la distribución precompilada localmente:
 
 ### Requisitos
 
-- **Node.js 20** o superior
+- **Node.js 22** o superior
 - **pnpm 11** (no se admite npm ni yarn)
 
 ```bash

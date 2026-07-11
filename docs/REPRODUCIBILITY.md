@@ -2,7 +2,7 @@
 
 ## Entorno
 
-- Node.js 20 o superior.
+- Node.js 22 o superior.
 - pnpm 11.
 - lockfile versionado.
 - TypeScript estricto.

@@ -6,7 +6,7 @@
   "description": "Plataforma científica evolutiva y reproducible con contratos, formatos, módulos, perfiles de organismo y genómica de sistemas.",
   "license": "https://spdx.org/licenses/MIT.html",
   "programmingLanguage": "TypeScript",
-  "runtimePlatform": "Node.js >=20",
+  "runtimePlatform": "Node.js >=22",
   "keywords": [
     "genomics",
     "bioinformatics",

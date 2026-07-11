@@ -9,7 +9,7 @@
 [![Demo en vivo](https://img.shields.io/badge/demo-en_vivo-4de3b5?logo=github&logoColor=white)](https://vladimiracunadev-create.github.io/human-genome-labs/)
 [![Release](https://img.shields.io/badge/release-v1.0.0-6bb5ff)](https://github.com/vladimiracunadev-create/human-genome-labs/releases/tag/v1.0.0)
 [![License: MIT](https://img.shields.io/badge/license-MIT-3fb950)](LICENSE)
-[![Node](https://img.shields.io/badge/node-%3E%3D20-339933?logo=node.js&logoColor=white)](package.json)
+[![Node](https://img.shields.io/badge/node-%3E%3D22-339933?logo=node.js&logoColor=white)](package.json)
 [![pnpm](https://img.shields.io/badge/pnpm-11-f69220?logo=pnpm&logoColor=white)](https://pnpm.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?logo=typescript&logoColor=white)](tsconfig.json)
 
@@ -37,7 +37,7 @@ Human Genome Labs mantiene un **núcleo verificable** y permite incorporar inves
 
 ## 🚀 Requisitos y arranque
 
-- Node.js 20 o superior;
+- Node.js 22 o superior;
 - pnpm 11. No se admite npm ni yarn para desarrollar el repositorio.
 
 ```bash
