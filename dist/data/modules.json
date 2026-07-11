@@ -89,7 +89,7 @@
       "id": "noncanonical-structures",
       "titleEs": "Estructuras no canónicas",
       "descriptionEs": "Detección de motivos candidatos y modelado de evidencia para G4, tríplex y otras conformaciones.",
-      "version": "0.3.0",
+      "version": "1.0.0",
       "maturity": "experimental",
       "package": "@human-genome-labs/genetics-core",
       "entrypoint": "packages/genetics-core/src/index.ts",
@@ -123,7 +123,7 @@
       "id": "somatic-observation",
       "titleEs": "Observaciones de mosaicismo somático",
       "descriptionEs": "Resumen estadístico de fracciones alélicas y trazabilidad de supuestos.",
-      "version": "0.2.0",
+      "version": "1.0.0",
       "maturity": "experimental",
       "package": "@human-genome-labs/genetics-core",
       "entrypoint": "packages/genetics-core/src/index.ts",
@@ -158,7 +158,7 @@
       "id": "pangenome",
       "titleEs": "Representación de pangenomas",
       "descriptionEs": "Contrato conceptual para referencias en grafo, haplotipos y rutas.",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "maturity": "concept",
       "capabilities": [
         "pangenome.metadata"

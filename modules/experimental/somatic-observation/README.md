@@ -1,6 +1,6 @@
 # Observaciones de mosaicismo somático
 
-**Madurez:** `experimental` · **Versión:** `0.2.0`
+**Madurez:** `experimental` · **Versión:** `1.0.0`
 
 Resumen estadístico de fracciones alélicas y trazabilidad de supuestos.
 

@@ -37,7 +37,7 @@
     },
     {
       "id": "generic-prokaryote",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "taxonomyId": null,
       "scientificName": "Perfil procarionte genérico",
       "compartment": "cellular",
@@ -54,7 +54,7 @@
     },
     {
       "id": "generic-rna-virus",
-      "version": "0.1.0",
+      "version": "1.0.0",
       "taxonomyId": null,
       "scientificName": "Perfil viral ARN genérico",
       "compartment": "virion",

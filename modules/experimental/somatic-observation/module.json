@@ -3,7 +3,7 @@
   "id": "somatic-observation",
   "titleEs": "Observaciones de mosaicismo somático",
   "descriptionEs": "Resumen estadístico de fracciones alélicas y trazabilidad de supuestos.",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "maturity": "experimental",
   "package": "@human-genome-labs/genetics-core",
   "entrypoint": "packages/genetics-core/src/index.ts",

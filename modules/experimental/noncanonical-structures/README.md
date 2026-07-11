@@ -1,6 +1,6 @@
 # Estructuras no canónicas
 
-**Madurez:** `experimental` · **Versión:** `0.3.0`
+**Madurez:** `experimental` · **Versión:** `1.0.0`
 
 Detección de motivos candidatos y modelado de evidencia para G4, tríplex y otras conformaciones.
 

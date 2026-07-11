@@ -3,7 +3,7 @@
   "id": "{{id}}",
   "titleEs": "{{title}}",
   "descriptionEs": "Describa el problema científico y el alcance.",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "maturity": "{{maturity}}",
   "capabilities": ["{{id}}.first_capability"],
   "evidenceLevel": "unknown",

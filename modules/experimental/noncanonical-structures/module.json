@@ -3,7 +3,7 @@
   "id": "noncanonical-structures",
   "titleEs": "Estructuras no canónicas",
   "descriptionEs": "Detección de motivos candidatos y modelado de evidencia para G4, tríplex y otras conformaciones.",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "maturity": "experimental",
   "package": "@human-genome-labs/genetics-core",
   "entrypoint": "packages/genetics-core/src/index.ts",

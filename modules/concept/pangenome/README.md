@@ -1,6 +1,6 @@
 # Representación de pangenomas
 
-**Madurez:** `concept` · **Versión:** `0.1.0`
+**Madurez:** `concept` · **Versión:** `1.0.0`
 
 Contrato conceptual para referencias en grafo, haplotipos y rutas.
 
