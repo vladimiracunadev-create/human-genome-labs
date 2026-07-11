@@ -3,6 +3,7 @@ const APP_SHELL = [
   "./",
   "./index.html",
   "./styles.css",
+  "./favicon.svg",
   "./assets/apps/web-lab/src/app.js",
   "./data/biology.json",
   "./data/modules.json",
