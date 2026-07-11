@@ -7,7 +7,7 @@ const assert = (condition, message) => { if (!condition) errors.push(message); }
 const unique = (items) => new Set(items).size === items.length;
 
 assert(database.metadata.version === "1.0.0", "La base debe declarar la versión 1.0.0.");
-assert(database.metadata.schema_version === "3.0.0", "La base debe declarar schema_version 3.0.0.");
+assert(database.metadata.schema_version === "1.0.0", "La base debe declarar schema_version 1.0.0.");
 assert(domainManifest.schema_version === "1.0.0", "El manifiesto de dominios debe declarar schema_version 1.0.0.");
 assert(domainManifest.merge_order.length >= 5, "La base debe estar dividida en al menos cinco dominios.");
 assert(database.codons.length === 64, "La tabla debe contener 64 codones.");

@@ -7,7 +7,7 @@ const url = new URL("https://rest.uniprot.org/uniprotkb/stream");
 url.searchParams.set("compressed", "true");
 url.searchParams.set("format", "fasta");
 url.searchParams.set("query", query);
-const response = await fetch(url, { headers: { "User-Agent": "human-genome-labs/3.0.0" } });
+const response = await fetch(url, { headers: { "User-Agent": "human-genome-labs/1.0.0" } });
 if (!response.ok) throw new Error(`UniProt respondió ${response.status}.`);
 const bytes = new Uint8Array(await response.arrayBuffer());
 const destination = resolve("datasets/raw");

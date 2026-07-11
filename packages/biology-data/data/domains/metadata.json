@@ -3,7 +3,7 @@
     "title": "Human Genome Labs — base de conocimiento molecular",
     "language": "es",
     "version": "1.0.0",
-    "schema_version": "3.0.0",
+    "schema_version": "1.0.0",
     "released_at": "2026-07-10",
     "scope": "Plataforma científica evolutiva para genética molecular y genómica de sistemas, organizada en contratos estables, módulos versionados, perfiles de organismo, formatos interoperables y niveles explícitos de evidencia.",
     "license": "CC0-1.0 para los hechos estructurados del proyecto; verificar licencias y términos de cada fuente externa.",
