@@ -5,6 +5,7 @@
 **Plataforma científica evolutiva, reproducible y educativa para genética molecular y genómica.**
 
 [![CI](https://github.com/vladimiracunadev-create/human-genome-labs/actions/workflows/ci.yml/badge.svg)](https://github.com/vladimiracunadev-create/human-genome-labs/actions/workflows/ci.yml)
+[![Security](https://github.com/vladimiracunadev-create/human-genome-labs/actions/workflows/security.yml/badge.svg)](https://github.com/vladimiracunadev-create/human-genome-labs/actions/workflows/security.yml)
 [![Demo en vivo](https://img.shields.io/badge/demo-en_vivo-4de3b5?logo=github&logoColor=white)](https://vladimiracunadev-create.github.io/human-genome-labs/)
 [![Release](https://img.shields.io/badge/release-v1.0.0-6bb5ff)](https://github.com/vladimiracunadev-create/human-genome-labs/releases/tag/v1.0.0)
 [![License: MIT](https://img.shields.io/badge/license-MIT-3fb950)](LICENSE)
@@ -12,7 +13,7 @@
 [![pnpm](https://img.shields.io/badge/pnpm-11-f69220?logo=pnpm&logoColor=white)](https://pnpm.io)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-3178c6?logo=typescript&logoColor=white)](tsconfig.json)
 
-[**🔬 Demo en vivo**](https://vladimiracunadev-create.github.io/human-genome-labs/) · [Documentación](docs/README.md) · [Roadmap](docs/ROADMAP.md) · [Changelog](CHANGELOG.md)
+[**🔬 Demo en vivo**](https://vladimiracunadev-create.github.io/human-genome-labs/) · [🚀 Empezar](GETTING_STARTED.md) · [📖 Documentación](docs/INDEX.md) · [🗺️ Roadmap](docs/ROADMAP.md) · [📗 Glosario](docs/GLOSSARY.md) · [❓ FAQ](docs/FAQ.md)
 
 </div>
 
@@ -98,6 +99,14 @@ templates/                  creación de módulos
 ## 🧭 Evolución
 
 La versión 1.0 establece la plataforma; no declara finalizada la genómica. El [roadmap](docs/ROADMAP.md) prioriza anotaciones, transcritos, variantes interoperables, regulación, pangenomas y genómica de sistemas conforme exista validación suficiente.
+
+## 🤝 Comunidad y contribución
+
+- [🚀 Guía de arranque](GETTING_STARTED.md) — de cero a tu primer resultado
+- [📖 Índice de documentación](docs/INDEX.md) — por perfil de lectura
+- [❓ FAQ](docs/FAQ.md) · [📗 Glosario](docs/GLOSSARY.md)
+- [🤝 Cómo contribuir](CONTRIBUTING.md) · [🏛️ Gobernanza](GOVERNANCE.md) · [🆘 Soporte](SUPPORT.md)
+- [🔒 Seguridad](SECURITY.md) · [📜 Código de conducta](CODE_OF_CONDUCT.md)
 
 ## 📄 Licencias
 

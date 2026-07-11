@@ -1,12 +1,18 @@
 # Documentación
 
+> 🧭 ¿No sabes por dónde empezar? Usa el **[Índice por perfil de lectura](INDEX.md)** o la **[Guía de arranque](../GETTING_STARTED.md)**.
+
 ## Comenzar
 
+- [Índice por perfil](INDEX.md)
+- [Guía de arranque](../GETTING_STARTED.md)
 - [Alcance científico](SCIENTIFIC_SCOPE.md)
 - [Arquitectura](ARCHITECTURE.md)
 - [Modelo evolutivo](EVOLUTION_MODEL.md)
 - [Roadmap](ROADMAP.md)
 - [Estado actual](PROJECT_STATUS.md)
+- [Glosario](GLOSSARY.md)
+- [Preguntas frecuentes](FAQ.md)
 
 ## Extensión
 

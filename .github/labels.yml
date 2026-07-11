@@ -14,3 +14,7 @@
   color: "fbca04"
 - name: maturity:validated
   color: "0e8a16"
+- name: dependencies
+  color: "0366d6"
+- name: security
+  color: "b60205"
