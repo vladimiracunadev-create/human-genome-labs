@@ -1,0 +1,77 @@
+name: Release
+
+# Publica un release de forma manual y verificada.
+# Uso: Actions → Release → Run workflow → versión (ej. v1.0.1).
+# La versión debe coincidir con package.json (bumpéalo y actualiza el CHANGELOG antes).
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Versión a publicar (formato vX.Y.Z, debe coincidir con package.json)"
+        required: true
+
+permissions:
+  contents: write # crear tag y release
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    name: release (${{ inputs.version }})
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+
+      - name: Validar formato y coincidencia de versión
+        run: |
+          input="${{ inputs.version }}"
+          if [[ ! "$input" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Formato inválido: usa vX.Y.Z (recibido: $input)"; exit 1
+          fi
+          pkg="v$(node -p "require('./package.json').version")"
+          if [ "$input" != "$pkg" ]; then
+            echo "::error::La versión $input no coincide con package.json ($pkg). Bumpea package.json primero."; exit 1
+          fi
+
+      - name: Verificar integridad del árbol (pristino)
+        run: node tools/verify-integrity.mjs
+
+      - uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4.1.0
+        with:
+          version: 11.0.0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22" # pnpm 11 requiere node:sqlite (Node 22+)
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+      - name: Verificación completa antes de publicar
+        run: pnpm check
+
+      - name: Extraer notas del CHANGELOG
+        run: |
+          ver="${{ inputs.version }}"; ver="${ver#v}"
+          awk -v v="$ver" '
+            /^## \[/ { if (found) exit; if (index($0, "["v"]")) { found=1; next } }
+            found { print }
+          ' CHANGELOG.md > release-notes.md
+          if [ ! -s release-notes.md ]; then
+            echo "No se encontró la sección [$ver] en CHANGELOG.md; usando RELEASE_NOTES.md" >&2
+            cp RELEASE_NOTES.md release-notes.md
+          fi
+          echo "----- notas -----"; cat release-notes.md
+
+      - name: Crear tag y release de GitHub
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "${{ inputs.version }}" \
+            --title "Human Genome Labs ${{ inputs.version }}" \
+            --notes-file release-notes.md \
+            --target "${{ github.sha }}" \
+            INTEGRITY.sha256
